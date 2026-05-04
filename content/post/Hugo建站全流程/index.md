@@ -929,7 +929,7 @@ internal_theme:                            #设置主题强调色
 
 ```
 ### 3.3 文章页写法
-1. 在 /blog/blog 的地址栏呼出命令行，输入 hugo new content post/blog1/index.md，或在 /blog/blog/content 文件夹内新建文件夹为 blog1，在 blog1文件夹内新建文件 index.md，打开文件，若需使用短代码功能请见下方 4.3节
+1. 在 /blog/blog 的地址栏呼出命令行，输入 `hugo new content post/blog1/index.md` ，或在 /blog/blog/content 文件夹内新建文件夹为 blog1，在 blog1文件夹内新建文件 index.md，打开文件，若需使用短代码功能请见下方 4.3节
 
 2. 请根据需要分别复制以下代码，**两段代码用途不一样，按需选择**
 

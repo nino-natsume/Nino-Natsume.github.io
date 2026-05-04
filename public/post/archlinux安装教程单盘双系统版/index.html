@@ -8,7 +8,7 @@
   name="viewport"
   content="width=device-width, initial-scale=1, shrink-to-fit=no"
 /><title>
-  基于VMWare的家用服务器设置 | 夏沐真凉
+  ArchLinux安装教程（单盘双系统版） | 夏沐真凉
 </title>
 <meta name="description" content="Ciallo～(∠・ω&lt; )⌒★"/><script>
   window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"base\":\"http://localhost:1313/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":15},\"i18n_languages\":[{\"Lang\":\"zh-cn\",\"LanguageName\":\"简体中文\",\"LanguageCode\":\"zh-CN\",\"Title\":\"次元星域\",\"LanguageDirection\":\"\",\"Weight\":1,\"Disabled\":false},{\"Lang\":\"zh-tw\",\"LanguageName\":\"繁體中文\",\"LanguageCode\":\"zh-TW\",\"Title\":\"次元星域\",\"LanguageDirection\":\"\",\"Weight\":2,\"Disabled\":false},{\"Lang\":\"ja\",\"LanguageName\":\"日本語\",\"LanguageCode\":\"ja\",\"Title\":\"次元星域\",\"LanguageDirection\":\"\",\"Weight\":3,\"Disabled\":false},{\"Lang\":\"en\",\"LanguageName\":\"English\",\"LanguageCode\":\"en\",\"Title\":\"Jigen_Seiki\",\"LanguageDirection\":\"\",\"Weight\":4,\"Disabled\":false}],\"icon_font\":\"4552607_4k4bc36ef96\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
@@ -33,12 +33,12 @@
     type="font/woff2"
     crossorigin="anonymous"
   /><link rel="stylesheet" href="/css/loader.css" /><meta property="og:type" content="website" />
-  <meta property="og:title" content="基于VMWare的家用服务器设置 | 夏沐真凉" />
+  <meta property="og:title" content="ArchLinux安装教程（单盘双系统版） | 夏沐真凉" />
   <meta
     property="og:description"
     content="Ciallo～(∠・ω&lt; )⌒★"
   />
-  <meta property="og:url" content="http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/" />
+  <meta property="og:url" content="http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/" />
   <meta
     property="og:site_name"
     content="次元星域"
@@ -48,8 +48,8 @@
     content="/"
   />
   <meta property="article:author" content="夏沐真凉" />
-  <meta property="article:published_time" content="2026-03-01T11:00:00&#43;09:00" />
-  <meta property="article:modified_time" content="2026-03-01T11:00:00&#43;09:00" /><meta property="article:tag" content="次元星域Hugo教程" /><meta name="twitter:card" content="summary" />
+  <meta property="article:published_time" content="2026-05-04T22:51:01&#43;09:00" />
+  <meta property="article:modified_time" content="2026-05-04T22:51:01&#43;09:00" /><meta name="twitter:card" content="summary" />
   <meta name="twitter:image" content="/" />
 <link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.css" /><link
     rel="preload"
@@ -156,7 +156,7 @@
 
         selectOptions.forEach((item) => {
           item.addEventListener("click", () => {
-            const langMap = {};langMap['ja'] = '\/ja\/post\/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE\/';langMap['en'] = '\/en\/post\/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE\/';selectedLang.textContent = item.textContent;
+            const langMap = {};selectedLang.textContent = item.textContent;
             selectItems.classList.remove("show");
             selectOptions.forEach((option) => {
               option.classList.remove("selected");
@@ -186,9 +186,9 @@
     </nav><a href="https://github.com/nino-natsume/" class="triangle-badge" title="github" target="_blank" rel="noopener nofollow noreferrer">
       <div class="icon icon-github triangle-badge-icon"></div>
     </a></div>
-<header id="header" aria-label="Site header"><picture></picture><img  fetchpriority="high" src="https://t.alcy.cc/ycy" alt="基于VMWare的家用服务器设置"><div id="header-outer">
+<header id="header" aria-label="Site header"><picture></picture><img  fetchpriority="high" src="https://t.alcy.cc/ycy" alt="ArchLinux安装教程（单盘双系统版）"><div id="header-outer">
     <div id="header-title"><span id="logo">
-            <h1 data-aos="slide-up">基于VMWare的家用服务器设置</h1>
+            <h1 data-aos="slide-up">ArchLinux安装教程（单盘双系统版）</h1>
           </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
   </div>
 </header><div id="content"
@@ -206,16 +206,27 @@
       <ol>
         <li><a href="#前言">前言</a>
           <ol>
-            <li><a href="#必备准备">必备准备</a></li>
+            <li><a href="#必备">必备</a></li>
           </ol>
         </li>
-        <li><a href="#前期操作">前期操作</a>
+        <li><a href="#相关设置">相关设置</a>
           <ol>
-            <li><a href="#创建服务器">创建服务器</a></li>
-            <li><a href="#服务器配置">服务器配置</a></li>
+            <li><a href="#安装系统">安装系统</a></li>
+            <li><a href="#连接网络">连接网络</a></li>
+            <li><a href="#设置中文">设置中文</a></li>
+            <li><a href="#多系统引导">多系统引导</a></li>
           </ol>
         </li>
-        <li><a href="#cloudflare的内网穿透设置">Cloudflare的内网穿透设置</a></li>
+        <li><a href="#各项配置">各项配置</a>
+          <ol>
+            <li><a href="#主题配置">主题配置</a></li>
+            <li><a href="#终端美化">终端美化</a></li>
+            <li><a href="#grub-美化">GRUB 美化</a></li>
+            <li><a href="#安装-makima-sddm">安装 Makima-SDDM</a></li>
+            <li><a href="#显卡声音设置">显卡、声音设置</a></li>
+            <li><a href="#其他设置">其他设置</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -325,11 +336,11 @@
     class="article-date-link icon-calendar"
     data-aos="zoom-in"
   >
-    <time datetime="2026-03-01 11:00:00 &#43;0900 JST" itemprop="datePublished"
-      >2026-03-01</time
+    <time datetime="2026-05-04 22:51:01 &#43;0900 JST" itemprop="datePublished"
+      >2026-05-04</time
     >
     <time style="display: none;" id="post-update-time"
-      >2026-03-01</time
+      >2026-05-04</time
     >
   </span></div>
 </div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><link rel="stylesheet" href="/css/heat-map.css" /><div id="heatmap"></div>
@@ -619,10 +630,10 @@ function completeContributionData(userData) {
 }
 
 
-var articleStats = [{"date":"2026-02-28","lastmod":"2026-02-28","title":"Hugo建站全流程","url":"/post/hugo%E5%BB%BA%E7%AB%99%E5%85%A8%E6%B5%81%E7%A8%8B/","wordcount":9145},{"date":"2026-05-04","lastmod":"2026-05-04","title":"ArchLinux安装教程（单盘双系统版）","url":"/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/","wordcount":870},{"date":"2026-04-15","lastmod":"2026-04-15","title":"基于CF worker方法的DOH搭建","url":"/post/%E5%9F%BA%E4%BA%8Ecf-worker%E6%96%B9%E6%B3%95%E7%9A%84doh%E6%90%AD%E5%BB%BA/","wordcount":9663},{"date":"2026-02-28","lastmod":"2026-02-28","title":"イケない！ 同棲らいふ 攻略","url":"/post/%E3%82%A4%E3%82%B1%E3%81%AA%E3%81%84-%E5%90%8C%E6%A3%B2%E3%82%89%E3%81%84%E3%81%B5/","wordcount":1636},{"date":"2026-02-27","lastmod":"2026-02-27","title":"","url":"/link/","wordcount":37},{"date":"2026-02-27","lastmod":"2026-02-27","title":"关于","url":"/about/","wordcount":268},{"date":"2026-02-27","lastmod":"2026-02-27","title":"一个人的观察与体会","url":"/post/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E8%A7%82%E5%AF%9F%E4%B8%8E%E4%BD%93%E4%BC%9A/","wordcount":1060},{"date":"2026-02-27","lastmod":"2026-02-27","title":"次元星域——一个简易的二次元小站","url":"/post/%E6%AC%A1%E5%85%83%E6%98%9F%E5%9F%9F%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E4%BA%8C%E6%AC%A1%E5%85%83%E5%B0%8F%E7%AB%99/","wordcount":307}];
+var articleStats = [{"date":"2026-02-28","lastmod":"2026-02-28","title":"Hugo建站全流程","url":"/post/hugo%E5%BB%BA%E7%AB%99%E5%85%A8%E6%B5%81%E7%A8%8B/","wordcount":9145},{"date":"2026-04-15","lastmod":"2026-04-15","title":"基于CF worker方法的DOH搭建","url":"/post/%E5%9F%BA%E4%BA%8Ecf-worker%E6%96%B9%E6%B3%95%E7%9A%84doh%E6%90%AD%E5%BB%BA/","wordcount":9663},{"date":"2026-03-01","lastmod":"2026-03-01","title":"基于VMWare的家用服务器设置","url":"/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/","wordcount":2039},{"date":"2026-02-28","lastmod":"2026-02-28","title":"イケない！ 同棲らいふ 攻略","url":"/post/%E3%82%A4%E3%82%B1%E3%81%AA%E3%81%84-%E5%90%8C%E6%A3%B2%E3%82%89%E3%81%84%E3%81%B5/","wordcount":1636},{"date":"2026-02-27","lastmod":"2026-02-27","title":"","url":"/link/","wordcount":37},{"date":"2026-02-27","lastmod":"2026-02-27","title":"关于","url":"/about/","wordcount":268},{"date":"2026-02-27","lastmod":"2026-02-27","title":"一个人的观察与体会","url":"/post/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E8%A7%82%E5%AF%9F%E4%B8%8E%E4%BD%93%E4%BC%9A/","wordcount":1060},{"date":"2026-02-27","lastmod":"2026-02-27","title":"次元星域——一个简易的二次元小站","url":"/post/%E6%AC%A1%E5%85%83%E6%98%9F%E5%9F%9F%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E4%BA%8C%E6%AC%A1%E5%85%83%E5%B0%8F%E7%AB%99/","wordcount":307}];
 
 function getLevelFromWordCount(totalCount) {
-  const levelStandard = "200,500,5000".split(",").map(Number);
+  const levelStandard = "200,500,1000".split(",").map(Number);
   if (totalCount <= 0) return 0;
   if (totalCount <= levelStandard[0]) return 1;
   if (totalCount <= levelStandard[1]) return 2;
@@ -652,311 +663,201 @@ createCalendar(document.querySelector("#heatmap"), transformArticlesData(article
 <h2 id="前言">
 <a class="header-anchor" href="#%e5%89%8d%e8%a8%80"></a>
 前言
-</h2><p>有些地区的运营商不会给用户开放公网ip，如果有也可能是动态公网，使用起来特别不友好</p>
-<p>如果用户有建站的需求，那么他大概率会想到在服务器商处购买服务器和域名，在国内的服务器还需要备案等，非常麻烦对吧？</p>
-<p>但是，如果我说现在有种方案，只要你有一部可上网的电脑、一个国外域名即可无需服务器完成网站外网访问，那么，你，会选择尝试吗？</p>
-<p>本方案类似于 Nas 搭建服务器，部分操作几乎一致</p>
-<h3 id="必备准备">
-<a class="header-anchor" href="#%e5%bf%85%e5%a4%87%e5%87%86%e5%a4%87"></a>
-必备准备
-</h3><p>在完成本项前请确保你已拥有以下东西：</p>
-<ol>
-<li>
-<p>一部可正常上网的电脑</p>
-</li>
-<li>
-<p>一个 Cloudflare 账号</p>
-</li>
-<li>
-<p>已在 Cloudflare 解析的 <strong>国外</strong>域名</p>
-</li>
-<li>
-<p>【非必须】一个空间足够大的外接硬盘，仅为有多余硬盘的用户操作</p>
-</li>
-</ol>
-<h2 id="前期操作">
-<a class="header-anchor" href="#%e5%89%8d%e6%9c%9f%e6%93%8d%e4%bd%9c"></a>
-前期操作
-</h2><h3 id="创建服务器">
-<a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%9c%8d%e5%8a%a1%e5%99%a8"></a>
-创建服务器
+</h2><p>本教程为自用，意在于记录搭建、部署、设置及美化所需的所有代码，可能不适合所有人，仅为个人设置模板</p>
+<h3 id="必备">
+<a class="header-anchor" href="#%e5%bf%85%e5%a4%87"></a>
+必备
 </h3><ol>
-<li>自行下载和安装VMWare 25H2，并创建典型虚拟机，配置可按下方表格设置</li>
+<li>
+<p>已制作好的 ArchLinux 启动盘，使用 Refus 制作，注意选择分区类型为 GPT</p>
+</li>
+<li>
+<p>已压缩好一定大小分区的设备（至少50G+）</p>
+</li>
 </ol>
-<p>表格的每行代表一个步骤，含 <em>&amp;</em> 的表示该步骤内有选填项，需按实际修改或操作</p>
+<h2 id="相关设置">
+<a class="header-anchor" href="#%e7%9b%b8%e5%85%b3%e8%ae%be%e7%bd%ae"></a>
+相关设置
+</h2><h3 id="安装系统">
+<a class="header-anchor" href="#%e5%ae%89%e8%a3%85%e7%b3%bb%e7%bb%9f"></a>
+安装系统
+</h3><p>按序输入以下代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-README.md" data-lang="README.md"><span class="line"><span class="cl">rfkill unblock wifi
+</span></span><span class="line"><span class="cl">iwctl
+</span></span><span class="line"><span class="cl">station wlan0 connect [WIFI名]  # 要输入密码
+</span></span><span class="line"><span class="cl">station list
+</span></span><span class="line"><span class="cl">exit
+</span></span><span class="line"><span class="cl">ping bing.com
+</span></span><span class="line"><span class="cl">lsblk
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">| Size | FS type | Mountpoint | Btrf |
+</span></span><span class="line"><span class="cl">| 1G(2G) | fat32 | /boot | / |
+</span></span><span class="line"><span class="cl">| 2G(8G) | linux-swap | / | / |
+</span></span><span class="line"><span class="cl">| 剩下所有 | btrfs | / | 两分区（@,/;<span class="ni">@home</span>,/home） |
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">archinstall
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">| 步骤 | 参考值（本设置以20260501版本为例，其他按需） |
+</span></span><span class="line"><span class="cl">| :---: | :---: |
+</span></span><span class="line"><span class="cl">| Mirrors | China |
+</span></span><span class="line"><span class="cl">| Disk | Manual(相关磁盘设置参考上表) |
+</span></span><span class="line"><span class="cl">| Swap | Disabled |
+</span></span><span class="line"><span class="cl">| Boot | Grub |
+</span></span><span class="line"><span class="cl">| Hostname、User account | 按需设置 |
+</span></span><span class="line"><span class="cl">| Profile | Desktop:KDE(第二个)  Graphics:Nvidia(open-source)  Greeter:SDDM |
+</span></span><span class="line"><span class="cl">| Applications | Audio:pipewire  Firewall:ufw  其余按需 |
+</span></span><span class="line"><span class="cl">| Pacman | color:on |
+</span></span><span class="line"><span class="cl">| Network | default backend |
+</span></span><span class="line"><span class="cl">| Additional | linux-lts-headers  btrfs-progs  os-prober  (↑上三必须 | 下面参考↓)
+</span></span><span class="line"><span class="cl">| / | base-devel  git  go  noto-fonts  noto-fonts-cjk  |
+</span></span><span class="line"><span class="cl">| / | noto-fonts-emoji  noto-fonts-extra  ttf-dejavu  ttf-liberation |
+</span></span><span class="line"><span class="cl">| Timezone | Asia/Tokyo |
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">install - yes
+</span></span><span class="line"><span class="cl">Reboot
+</span></span></code></pre></div><h3 id="连接网络">
+<a class="header-anchor" href="#%e8%bf%9e%e6%8e%a5%e7%bd%91%e7%bb%9c"></a>
+连接网络
+</h3><p>先看右下角有无wifi图标，有则直接连，无则输入对应代码</p>
+<p>对应安装系统时的选项输入，<strong>不要都输！</strong></p>
 <table>
   <thead>
       <tr>
-          <th style="text-align: center">步骤</th>
-          <th style="text-align: center">设置</th>
+          <th style="text-align: center">default</th>
+          <th style="text-align: center">iwd</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: center">install from:</td>
-          <td style="text-align: center">I will install the operating system later.</td>
+          <td style="text-align: center">nmtui</td>
+          <td style="text-align: center">iwctl</td>
       </tr>
       <tr>
-          <td style="text-align: center">Guest operating system &amp; Version</td>
-          <td style="text-align: center">Linux &amp; Debian 13 x64位</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">Virtual machine name &amp; Location</td>
-          <td style="text-align: center">Debian 13 &amp; D:\Desktop\VMWare</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">最大磁盘大小（GB）</td>
-          <td style="text-align: center">20 &amp; 将虚拟磁盘拆分成多个文件</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">已准备好创建虚拟机</td>
-          <td style="text-align: center">完成</td>
+          <td style="text-align: center">连接wifi</td>
+          <td style="text-align: center">后续代码与初始代码一致，不再赘述</td>
       </tr>
   </tbody>
 </table>
-<p>设置虚拟机，点击编辑虚拟机设置：</p>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: center">设备</th>
-          <th style="text-align: center">摘要</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">内存</td>
-          <td style="text-align: center">4GB（以物理机配置灵活调节）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">处理器</td>
-          <td style="text-align: center">4（以物理机配置灵活调节）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">硬盘</td>
-          <td style="text-align: center">20GB（建议40GB，以物理机配置灵活调节，若使用外接硬盘，此项应删除，创建好系统后再添加）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">CD/DVD(SATA)</td>
-          <td style="text-align: center">选择系统镜像文件所在路径</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">网络适配器</td>
-          <td style="text-align: center">NAT（或桥接，视需求决定）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">USB控制器</td>
-          <td style="text-align: center">USB 3.2 &amp; 显示所有 USB 输入设备</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">声卡</td>
-          <td style="text-align: center">此项删除</td>
-      </tr>
-  </tbody>
-</table>
-<details class="details custom-block">
-  <summary>补充说明</summary>
-  <div class="details-content"><ol>
-<li>
-<p>VMWare可视需求自行选择是否使用汉化，当前汉化包翻译可能不完全，但足够日常使用了</p>
-</li>
-<li>
-<p>若使用外接硬盘，此项必做，请先删除【设置】中【硬盘】项，退出VMWare，使用管理员权限打开，进入设置界面，选择硬盘，设置内会显示 PhysicalDriver0 或 PhysicalDriver1 等，找到对应你外接硬盘的硬盘大小的物理磁盘后点击保存，再按上表配置其他设置</p>
-</li>
-<li>
-<p>系统镜像文件可在<a href="https://pan.107211.xyz/s/aycw">此处</a>获取</p>
-</li>
-<li>
-<p>【网络适配器】栏的选择，若想让虚拟机独占一个 ip 选择桥接，否则选择 NAT，配置桥接的方法将在下方讲解，可在下方查看</p>
-</li>
-</ol>
-</div>
-</details>
-<ol start="2">
-<li>
-<p>保存设置后，正式进入系统安装界面，本过程预计耗时30min，需随时查看安装进度以进入下一安装步骤</p>
-</li>
-<li>
-<p>根据以下配置完成系统安装</p>
-</li>
-</ol>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: center">步骤</th>
-          <th style="text-align: center">设置</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">启动界面</td>
-          <td style="text-align: center">Graphical install（若使用 install，即命令行安装，操作与下一致）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">选择语言、国家、时区</td>
-          <td style="text-align: center">Chinese &amp; China &amp; China</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">主机名 &amp; 域名 &amp; 密码</td>
-          <td style="text-align: center">任意，如ciallo &amp; 留空 &amp; 自行输入</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">普通用户全名 &amp; 登录用户名 &amp; 密码</td>
-          <td style="text-align: center">任意 &amp; 任意 &amp; 任意</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">磁盘选择 &amp; 选择磁盘</td>
-          <td style="text-align: center">使用整个磁盘（Guided - use entire disk） &amp; SCSI? （根据自己设的大小选择）</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">选择分区模式 &amp; 完成并保存分区</td>
-          <td style="text-align: center">所有目录都在根目录 &amp; 完成分区 &amp; 将改动应用至磁盘</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">可选项</td>
-          <td style="text-align: center"><strong>不</strong>扫描额外介质 &amp; 启用网络镜像？（此处选 <strong>是</strong> &amp; ustc.edu.cn）&amp; <strong>不</strong>统计使用情况</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">选择安装的软件 <strong>【此项必须一致，不然后续使用会有影响】</strong></td>
-          <td style="text-align: center">Debian desktop environment &amp; web server &amp; SSH server &amp; standard system utilities</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">是否安装GRUB引导器至磁盘？</td>
-          <td style="text-align: center">是 &amp; /dev/sda</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">等待重启</td>
-          <td style="text-align: center">继续</td>
-      </tr>
-  </tbody>
-</table>
-<ol start="4">
-<li>待重启后，使用普通用户的密码登录后，即可成功进入系统</li>
-</ol>
-<h3 id="服务器配置">
-<a class="header-anchor" href="#%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%85%8d%e7%bd%ae"></a>
-服务器配置
-</h3><p>打开系统终端（VMWare的，不是你物理机的），选择安装 <strong>宝塔面板</strong>或 <strong>1panel</strong>管理面板，这里以 1panel 为例</p>
-<ol>
-<li>打开终端后，输入 <code>su</code> ，输入管理员密码进入root模式，再输入以下代码完成初始环境和面板安装，1panel按自行喜好设置</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt update
-</span></span><span class="line"><span class="cl">sudo apt-get install -y curl
-</span></span><span class="line"><span class="cl">bash -c &#34;$(curl -sSL https://resource.fit2cloud.com/1panel/package/v2/quick_start.sh)&#34;
-</span></span></code></pre></div><details class="details custom-block">
-  <summary>桥接模式设置（仅虚拟机设置了桥接时配置）</summary>
-  <div class="details-content"><ol>
-<li>
-<p>关闭 VMWare，以管理员权限启动，点击菜单的【编辑】 - 【虚拟网络编辑器】，点击右下角的【变更设置】，修改VMnet0 的网卡为你自己 <strong>实际在用的网卡</strong>，点击保存，再启动虚拟机</p>
-</li>
-<li>
-<p>进入管理面板后，点击【终端】，输入 <code>ip address</code>，查看第二个设备的设备名，记住它</p>
-</li>
-<li>
-<p>点击【系统】 - 【文件】，打开 <code>/etc/network/interfaces</code> 文件，在文件内添加以下代码后，保存</p>
-</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">auto [你的第二个设备名，要删外面括号]
-</span></span><span class="line"><span class="cl">iface [你的第二个设备名，要删外面括号] inet static
-</span></span><span class="line"><span class="cl">address 192.168.x.y                        # 输入你要给设备的ip，需确保不会与同网段ip冲突      
-</span></span><span class="line"><span class="cl">netmask 255.255.255.0
-</span></span><span class="line"><span class="cl">gateway 192.168.x.1                        # 输入设备网关，x是你上面填的值
-</span></span></code></pre></div><ol start="4">
-<li>打开 <code>/etc/resolv.conf</code> 文件，输入以下内容并保存</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nameserver 114.114.115.115
-</span></span><span class="line"><span class="cl">nameserver 8.8.8.8
-</span></span><span class="line"><span class="cl">nameserver 8.8.4.4
-</span></span></code></pre></div><ol start="5">
-<li>打开【终端】，再次输入 <code>ip address</code>，查看设备是否为你给设备配置的ip，若是则完成桥接模式的配置，否则返回去检查</li>
-</ol>
-</div>
-</details>
-<ol start="2">
-<li>任意在应用商店安装一个应用，注意记得勾选 <strong>端口外部访问</strong>，若可通过 <code>内网ip:端口</code>的方式访问则基本服务正常</li>
-</ol>
-<h2 id="cloudflare的内网穿透设置">
-<a class="header-anchor" href="#cloudflare%e7%9a%84%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f%e8%ae%be%e7%bd%ae"></a>
-Cloudflare的内网穿透设置
-</h2><ol>
-<li>
-<p>打开Cloudflare，点击侧边栏【保护和连接】 - 【联网】 - 【Tunnels】，创建隧道，名字任意，点击【取消】</p>
-</li>
-<li>
-<p>点击刚创建的隧道，在【副本】选择系统（若使用本教程镜像应选择 Debian - arm64），复制最下面的代码至桌面的某个文件内备用，下方为参考示例</p>
-</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-隧道_例.md" data-lang="隧道_例.md"><span class="line"><span class="cl">cloudflared tunnel run --token eyJhIjoiMWM4YjY2ZmVlOWRkMzljMzE4OTg3MjZjZmY0NWFmMDgiLCJ0IjoiNDMyZDNk00QtNjc5NS00MmE5LWJiN2ItNDZjMGFhZjNkZjM2IiwicyI6Ik9HWTJNbVl6TmpRdFlUWTBOaTAwTlRJM0xUaGtZMkl0WlRjME9UWm1OV1kwWkRZdyJ9
-</span></span></code></pre></div><ol start="3">
-<li>在虚拟机的期望文件夹内创建一个文件 docker-compose.yml ，输入以下代码并保存</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version: &#39;3.3&#39;
-</span></span><span class="line"><span class="cl">services:
-</span></span><span class="line"><span class="cl">  cloudflared:
-</span></span><span class="line"><span class="cl">    image: cloudflare/cloudflared:latest
-</span></span><span class="line"><span class="cl">    container_name: cloudflared
-</span></span><span class="line"><span class="cl">    restart: unless-stopped
-</span></span><span class="line"><span class="cl">    command: tunnel run
-</span></span><span class="line"><span class="cl">    environment:
-</span></span><span class="line"><span class="cl">      - TUNNEL_TOKEN=eyJhxxxxxxxxxxxxxxxxxxxxdyJ9  # 提供 Token
-</span></span></code></pre></div><ol start="4">
-<li>
-<p>在当前文件夹的终端输入 <code>sudo docker compose up -d</code> 启动服务，返回Cloudflare，若状态为 健康，则隧道搭建完成</p>
-</li>
-<li>
-<p>隧道用法：点击【路由】 - 【添加路由】 - 【已发布的应用程序】，按照需求输入和选择域名，可参考下方示例填写</p>
-</li>
-</ol>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: center">对应项</th>
-          <th style="text-align: center">参考值</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">子域（可选）</td>
-          <td style="text-align: center">anime</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">域</td>
-          <td style="text-align: center">ciallo.cc</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">路径（可选）</td>
-          <td style="text-align: center">留空</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">服务URL</td>
-          <td style="text-align: center">http://192.168.91.78:721</td>
-      </tr>
-  </tbody>
-</table>
-<ol start="6">
-<li>等待自动添加好CNAME记录后，访问域名，正常显示网页即成功</li>
-</ol>
+<h3 id="设置中文">
+<a class="header-anchor" href="#%e8%ae%be%e7%bd%ae%e4%b8%ad%e6%96%87"></a>
+设置中文
+</h3><p>按序输入以下代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-README.md" data-lang="README.md"><span class="line"><span class="cl">sudo nano /etc/locale.conf
+</span></span><span class="line"><span class="cl"><span class="gh"># 与 zh_CN 有关的都删掉 # 号，ctrl+x - y
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo locale-gen
+</span></span><span class="line"><span class="cl">su
+</span></span><span class="line"><span class="cl">echo &#39;LANG=zh_CN.UTF-8&#39; &gt; /etc/locale.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># 设置选择简中
+</span></span></span><span class="line"><span class="cl">Reboot
+</span></span></code></pre></div><h3 id="多系统引导">
+<a class="header-anchor" href="#%e5%a4%9a%e7%b3%bb%e7%bb%9f%e5%bc%95%e5%af%bc"></a>
+多系统引导
+</h3><p>按序输入以下代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-README.md" data-lang="README.md"><span class="line"><span class="cl">cd /
+</span></span><span class="line"><span class="cl">sudo nano /etc/default/grub
+</span></span><span class="line"><span class="cl"><span class="gh"># 删除最后一行的 # 号
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">su
+</span></span><span class="line"><span class="cl">lsblk # 找到win系统的EFI分区名称
+</span></span><span class="line"><span class="cl">mount /dev/sda1 /mnt
+</span></span><span class="line"><span class="cl">os-prober
+</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg
+</span></span><span class="line"><span class="cl"><span class="gh"># 显示完成或 done 表示成功，重启即可
+</span></span></span></code></pre></div><h2 id="各项配置">
+<a class="header-anchor" href="#%e5%90%84%e9%a1%b9%e9%85%8d%e7%bd%ae"></a>
+各项配置
+</h2><h3 id="主题配置">
+<a class="header-anchor" href="#%e4%b8%bb%e9%a2%98%e9%85%8d%e7%bd%ae"></a>
+主题配置
+</h3><p>按需配置</p>
+<h3 id="终端美化">
+<a class="header-anchor" href="#%e7%bb%88%e7%ab%af%e7%be%8e%e5%8c%96"></a>
+终端美化
+</h3><p>输入以下代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-README.md" data-lang="README.md"><span class="line"><span class="cl">sudo pacman -S zsh
+</span></span><span class="line"><span class="cl">chsh -s /bin/zsh
+</span></span><span class="line"><span class="cl">sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34;
+</span></span><span class="line"><span class="cl">nano ~/.zshrc
+</span></span><span class="line"><span class="cl">ZSH_THEME=&#34;agnoster&#34;   # 找到主题设置行并修改
+</span></span><span class="line"><span class="cl">plugins=(git zsh-autosuggestions zsh-syntax-highlighting)   # 修改插件引用配置
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">source ~/.zshrc   # 保存并应用更改
+</span></span></code></pre></div><h3 id="grub-美化">
+<a class="header-anchor" href="#grub-%e7%be%8e%e5%8c%96"></a>
+GRUB 美化
+</h3><p><strong>按需</strong>输入以下代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-README.md" data-lang="README.md"><span class="line"><span class="cl">cd ~
+</span></span><span class="line"><span class="cl">git clone https://github.com/13atm01/GRUB-Theme.git
+</span></span><span class="line"><span class="cl">cd &#39;Hoshimati Suisei&#39;
+</span></span><span class="line"><span class="cl">sudo sh ./install.sh
+</span></span><span class="line"><span class="cl">sudo grub-mkconfig -o /boot/grub/grub.cfg
+</span></span><span class="line"><span class="cl">sudo reboot
+</span></span></code></pre></div><h3 id="安装-makima-sddm">
+<a class="header-anchor" href="#%e5%ae%89%e8%a3%85-makima-sddm"></a>
+安装 Makima-SDDM
+</h3><p><strong>按需</strong>输入以下代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-README.md" data-lang="README.md"><span class="line"><span class="cl"><span class="gh"># 注意：yay需要在普通用户下安装，以下步骤同
+</span></span></span><span class="line"><span class="cl">cd ~
+</span></span><span class="line"><span class="cl">git clone https://aur.archlinux.org/yay.git
+</span></span><span class="line"><span class="cl">go env -w GO111MODULE=on
+</span></span><span class="line"><span class="cl">go env -w GOPROXY=https://goproxy.cn,direct
+</span></span><span class="line"><span class="cl">export GO111MODULE=on
+</span></span><span class="line"><span class="cl">export GOPROXY=https://goproxy.cn
+</span></span><span class="line"><span class="cl">cd yay
+</span></span><span class="line"><span class="cl">makepkg -si
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="gh"># 安装Makima-sddm
+</span></span></span><span class="line"><span class="cl">sudo pacman -S sddm noto-fonts-cjk
+</span></span><span class="line"><span class="cl">yay -S otf-ipafont qt5-graphicaleffects qt5-quickcontrols2
+</span></span><span class="line"><span class="cl">sudo git clone https://github.com/Arnau029/Makima-SDDM.git
+</span></span><span class="line"><span class="cl">sudo mv Makima-SDDM /usr/share/sddm/themes
+</span></span><span class="line"><span class="cl">sudo nano /etc/sddm.conf
+</span></span><span class="line"><span class="cl"><span class="gh"># 以下内容至sddm.conf内
+</span></span></span><span class="line"><span class="cl">[Theme]
+</span></span><span class="line"><span class="cl"><span class="gh">#Current the name
+</span></span></span><span class="line"><span class="cl">Current=Makima-SDDM
+</span></span></code></pre></div><p>Reboot后即可看到登录页面修改</p>
+<h3 id="显卡声音设置">
+<a class="header-anchor" href="#%e6%98%be%e5%8d%a1%e5%a3%b0%e9%9f%b3%e8%ae%be%e7%bd%ae"></a>
+显卡、声音设置
+</h3><p>按需输入代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-README.md" data-lang="README.md"><span class="line"><span class="cl">Nvidia显卡(TUxxx):
+</span></span><span class="line"><span class="cl">yay -S nvidia-settings nvidia-utils nvidia-open-dkms
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">声音:
+</span></span><span class="line"><span class="cl">先试已有的，都没用再根据型号下驱动
+</span></span></code></pre></div><h3 id="其他设置">
+<a class="header-anchor" href="#%e5%85%b6%e4%bb%96%e8%ae%be%e7%bd%ae"></a>
+其他设置
+</h3><p>按需设置</p>
 </div>
     <footer class="article-footer"><blockquote class="article-copyright"><p><strong><span class="icon-user icon"></span>本文作者：</strong>夏沐真凉</p><p>
-      <strong><span class="icon-link icon"></span>本文链接：</strong><a href="http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/">http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/</a>
-    </p><p><strong><span class="icon-pencil icon"></span>本文标题：</strong>基于VMWare的家用服务器设置</p><p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2026-03-01 11:00:00</p><p>
+      <strong><span class="icon-link icon"></span>本文链接：</strong><a href="http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/">http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/</a>
+    </p><p><strong><span class="icon-pencil icon"></span>本文标题：</strong>ArchLinux安装教程（单盘双系统版）</p><p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2026-05-04 22:51:01</p><p>
       
       <strong><span class="icon-copyright icon"></span>本文版权：</strong>
       本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener nofollow noreferrer" target="_blank"><span class="icon-creative-commons"></span>BY-NC-SA</a> 许可协议。转载请注明出处！
     </p>
     <span class="icon-creative-commons article-copyright-bg"></span></blockquote>
-<div class="share-wrapper"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+<div class="share-wrapper"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/" target="_blank" rel="noopener noreferrer" title="ArchLinux安装教程（单盘双系统版）">
       <div class="share-icon icon icon-facebook"></div>
-    </a><a href="https://twitter.com/intent/tweet?url=http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;text=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;via=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+    </a><a href="https://twitter.com/intent/tweet?url=http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/&amp;text=ArchLinux%e5%ae%89%e8%a3%85%e6%95%99%e7%a8%8b%ef%bc%88%e5%8d%95%e7%9b%98%e5%8f%8c%e7%b3%bb%e7%bb%9f%e7%89%88%ef%bc%89&amp;via=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="ArchLinux安装教程（单盘双系统版）">
       <div class="share-icon icon icon-twitter"></div>
-    </a><a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;summary=%20%e5%89%8d%e8%a8%80%20%e6%9c%89%e4%ba%9b%e5%9c%b0%e5%8c%ba%e7%9a%84%e8%bf%90%e8%90%a5%e5%95%86%e4%b8%8d%e4%bc%9a%e7%bb%99%e7%94%a8%e6%88%b7%e5%bc%80%e6%94%be%e5%85%ac%e7%bd%91ip%ef%bc%8c%e5%a6%82%e6%9e%9c%e6%9c%89%e4%b9%9f%e5%8f%af%e8%83%bd%e6%98%af%e5%8a%a8%e6%80%81%e5%85%ac%e7%bd%91%ef%bc%8c%e4%bd%bf%e7%94%a8%e8%b5%b7%e6%9d%a5%e7%89%b9%e5%88%ab%e4%b8%8d%e5%8f%8b%e5%a5%bd%0a&amp;mini=true&amp;ro=true" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+    </a><a href="https://www.linkedin.com/shareArticle?url=http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/&amp;title=ArchLinux%e5%ae%89%e8%a3%85%e6%95%99%e7%a8%8b%ef%bc%88%e5%8d%95%e7%9b%98%e5%8f%8c%e7%b3%bb%e7%bb%9f%e7%89%88%ef%bc%89&amp;summary=%20%e5%89%8d%e8%a8%80%20%e6%9c%ac%e6%95%99%e7%a8%8b%e4%b8%ba%e8%87%aa%e7%94%a8%ef%bc%8c%e6%84%8f%e5%9c%a8%e4%ba%8e%e8%ae%b0%e5%bd%95%e6%90%ad%e5%bb%ba%e3%80%81%e9%83%a8%e7%bd%b2%e3%80%81%e8%ae%be%e7%bd%ae%e5%8f%8a%e7%be%8e%e5%8c%96%e6%89%80%e9%9c%80%e7%9a%84%e6%89%80%e6%9c%89%e4%bb%a3%e7%a0%81%ef%bc%8c%e5%8f%af%e8%83%bd%e4%b8%8d%e9%80%82%e5%90%88%e6%89%80%e6%9c%89%e4%ba%ba%ef%bc%8c%e4%bb%85%e4%b8%ba%e4%b8%aa%e4%ba%ba%e8%ae%be%e7%bd%ae%e6%a8%a1%e6%9d%bf%0a&amp;mini=true&amp;ro=true" target="_blank" rel="noopener noreferrer" title="ArchLinux安装教程（单盘双系统版）">
       <div class="share-icon icon icon-linkedin"></div>
-    </a><a href="https://www.reddit.com/submit?url=http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+    </a><a href="https://www.reddit.com/submit?url=http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/&amp;title=ArchLinux%e5%ae%89%e8%a3%85%e6%95%99%e7%a8%8b%ef%bc%88%e5%8d%95%e7%9b%98%e5%8f%8c%e7%b3%bb%e7%bb%9f%e7%89%88%ef%bc%89" target="_blank" rel="noopener noreferrer" title="ArchLinux安装教程（单盘双系统版）">
       <div class="share-icon icon icon-reddit"></div>
-    </a><a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;appkey=&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+    </a><a href="https://service.weibo.com/share/share.php?url=http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/&amp;appkey=&amp;title=ArchLinux%e5%ae%89%e8%a3%85%e6%95%99%e7%a8%8b%ef%bc%88%e5%8d%95%e7%9b%98%e5%8f%8c%e7%b3%bb%e7%bb%9f%e7%89%88%ef%bc%89&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="ArchLinux安装教程（单盘双系统版）">
       <div class="share-icon icon icon-weibo"></div>
-    </a><a href="https://connect.qq.com/widget/shareqq/index.html?url=http://localhost:1313/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;desc=%20%e5%89%8d%e8%a8%80%20%e6%9c%89%e4%ba%9b%e5%9c%b0%e5%8c%ba%e7%9a%84%e8%bf%90%e8%90%a5%e5%95%86%e4%b8%8d%e4%bc%9a%e7%bb%99%e7%94%a8%e6%88%b7%e5%bc%80%e6%94%be%e5%85%ac%e7%bd%91ip%ef%bc%8c%e5%a6%82%e6%9e%9c%e6%9c%89%e4%b9%9f%e5%8f%af%e8%83%bd%e6%98%af%e5%8a%a8%e6%80%81%e5%85%ac%e7%bd%91%ef%bc%8c%e4%bd%bf%e7%94%a8%e8%b5%b7%e6%9d%a5%e7%89%b9%e5%88%ab%e4%b8%8d%e5%8f%8b%e5%a5%bd%0a&amp;source=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+    </a><a href="https://connect.qq.com/widget/shareqq/index.html?url=http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/&amp;title=ArchLinux%e5%ae%89%e8%a3%85%e6%95%99%e7%a8%8b%ef%bc%88%e5%8d%95%e7%9b%98%e5%8f%8c%e7%b3%bb%e7%bb%9f%e7%89%88%ef%bc%89&amp;desc=%20%e5%89%8d%e8%a8%80%20%e6%9c%ac%e6%95%99%e7%a8%8b%e4%b8%ba%e8%87%aa%e7%94%a8%ef%bc%8c%e6%84%8f%e5%9c%a8%e4%ba%8e%e8%ae%b0%e5%bd%95%e6%90%ad%e5%bb%ba%e3%80%81%e9%83%a8%e7%bd%b2%e3%80%81%e8%ae%be%e7%bd%ae%e5%8f%8a%e7%be%8e%e5%8c%96%e6%89%80%e9%9c%80%e7%9a%84%e6%89%80%e6%9c%89%e4%bb%a3%e7%a0%81%ef%bc%8c%e5%8f%af%e8%83%bd%e4%b8%8d%e9%80%82%e5%90%88%e6%89%80%e6%9c%89%e4%ba%ba%ef%bc%8c%e4%bb%85%e4%b8%ba%e4%b8%aa%e4%ba%ba%e8%ae%be%e7%bd%ae%e6%a8%a1%e6%9d%bf%0a&amp;source=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="ArchLinux安装教程（单盘双系统版）">
       <div class="share-icon icon icon-qq"></div>
-    </a><a href="javascript:;"  title="基于VMWare的家用服务器设置">
+    </a><a href="javascript:;"  title="ArchLinux安装教程（单盘双系统版）">
       <div class="share-icon icon icon-weixin"><div id="share-weixin">
             <div class="share-weixin-dom">
               <div class="share-weixin-content">
@@ -976,12 +877,12 @@ Cloudflare的内网穿透设置
           </div></div>
     </a></div><a
           data-aos="zoom-in"
-          href="/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/#comments"
+          href="/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/#comments"
           class="article-comment-link"
         >
           <span
             class="post-comments-count waline-comment-count"
-            data-path="/post/%e5%9f%ba%e4%ba%8evmware%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae/"
+            data-path="/post/archlinux%e5%ae%89%e8%a3%85%e6%95%99%e7%a8%8b%e5%8d%95%e7%9b%98%e5%8f%8c%e7%b3%bb%e7%bb%9f%e7%89%88/"
             itemprop="commentCount"
           ></span>
           留言
@@ -991,69 +892,41 @@ Cloudflare的内网穿透设置
         >
           <span
             class="waline-pageview-count"
-            data-path="/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/"
+            data-path="/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/"
             >0</span
           >
           <em class="post-meta-item-text">阅读量</em>
-        </span><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
-    <a
-      class="article-category-link"
-      href="/categories/%e6%ac%a1%e5%85%83%e6%98%9f%e5%9f%9f"
-      data-aos="zoom-in"
-      >次元星域</a
-    >
-    </li></ul>
-<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in">
-      <a
-        class="article-tag-list-link"
-        href="/tags/%e6%ac%a1%e5%85%83%e6%98%9f%e5%9f%9f"
-        rel="tag"
-        >次元星域</a
-      >
-    </li><li class="article-tag-list-item" data-aos="zoom-in">
-      <a
-        class="article-tag-list-link"
-        href="/tags/hugo"
-        rel="tag"
-        >Hugo</a
-      >
-    </li><li class="article-tag-list-item" data-aos="zoom-in">
-      <a
-        class="article-tag-list-link"
-        href="/tags/%e6%95%99%e7%a8%8b"
-        rel="tag"
-        >教程</a
-      >
-    </li></ul>
+        </span><ul class="article-category-list"></ul>
+<ul class="article-tag-list" itemprop="keywords"></ul>
 </footer>
   </div><nav
     id="article-nav"
     aria-label="Article navigation"
     data-aos="fade-up"
   ><div class="article-nav-link-wrap left"><img
-              data-src="https://tc.alcy.cc/tc/20260121/576f2676aec5168df2a3b22c87907b13.webp"
-              data-sizes="auto"
-              alt="イケない！ 同棲らいふ 攻略"
-              class="lazyload"
-            /><a
-          href="/post/%E3%82%A4%E3%82%B1%E3%81%AA%E3%81%84-%E5%90%8C%E6%A3%B2%E3%82%89%E3%81%84%E3%81%B5/"
-          aria-label="前一篇:イケない！ 同棲らいふ 攻略"
-          title="前一篇:イケない！ 同棲らいふ 攻略"
-        ></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">イケない！ 同棲らいふ 攻略</h3>
-      </div><div class="article-nav-link-wrap right"><img
-              data-src="https://tc.alcy.cc/tc/20260121/0c7e343b2337e65c3af4d7674661dcf0.webp"
+              data-src="https://tc.alcy.cc/tc/20260121/95c4bdfa3c2a31195ba8fd60fbcf18ab.webp"
               data-sizes="auto"
               alt="基于CF worker方法的DOH搭建"
               class="lazyload"
             /><a
           href="/post/%E5%9F%BA%E4%BA%8Ecf-worker%E6%96%B9%E6%B3%95%E7%9A%84doh%E6%90%AD%E5%BB%BA/"
-          aria-label="后一篇:基于CF worker方法的DOH搭建"
-          title="后一篇:基于CF worker方法的DOH搭建"
+          aria-label="前一篇:基于CF worker方法的DOH搭建"
+          title="前一篇:基于CF worker方法的DOH搭建"
+        ></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">基于CF worker方法的DOH搭建</h3>
+      </div><div class="article-nav-link-wrap right"><img
+              data-src="https://tc.alcy.cc/tc/20260121/576f2676aec5168df2a3b22c87907b13.webp"
+              data-sizes="auto"
+              alt="Hugo建站全流程"
+              class="lazyload"
+            /><a
+          href="/post/hugo%E5%BB%BA%E7%AB%99%E5%85%A8%E6%B5%81%E7%A8%8B/"
+          aria-label="后一篇:Hugo建站全流程"
+          title="后一篇:Hugo建站全流程"
         ></a>
         <div class="article-nav-caption">后一篇</div>
-        <h3 class="article-nav-title">基于CF worker方法的DOH搭建</h3>
+        <h3 class="article-nav-title">Hugo建站全流程</h3>
       </div></nav></article><section id="comments" data-aos="fade-up">
 <div class="comment-header"><h2 class="comment-title">说些什么吧！</h2>
   <div class="comment-selector">
@@ -1106,16 +979,27 @@ Cloudflare的内网穿透设置
       <ol>
         <li><a href="#前言">前言</a>
           <ol>
-            <li><a href="#必备准备">必备准备</a></li>
+            <li><a href="#必备">必备</a></li>
           </ol>
         </li>
-        <li><a href="#前期操作">前期操作</a>
+        <li><a href="#相关设置">相关设置</a>
           <ol>
-            <li><a href="#创建服务器">创建服务器</a></li>
-            <li><a href="#服务器配置">服务器配置</a></li>
+            <li><a href="#安装系统">安装系统</a></li>
+            <li><a href="#连接网络">连接网络</a></li>
+            <li><a href="#设置中文">设置中文</a></li>
+            <li><a href="#多系统引导">多系统引导</a></li>
           </ol>
         </li>
-        <li><a href="#cloudflare的内网穿透设置">Cloudflare的内网穿透设置</a></li>
+        <li><a href="#各项配置">各项配置</a>
+          <ol>
+            <li><a href="#主题配置">主题配置</a></li>
+            <li><a href="#终端美化">终端美化</a></li>
+            <li><a href="#grub-美化">GRUB 美化</a></li>
+            <li><a href="#安装-makima-sddm">安装 Makima-SDDM</a></li>
+            <li><a href="#显卡声音设置">显卡、声音设置</a></li>
+            <li><a href="#其他设置">其他设置</a></li>
+          </ol>
+        </li>
       </ol>
     </li>
   </ol>
@@ -1330,9 +1214,9 @@ Cloudflare的内网穿透设置
   <div><script data-pjax>
         window.REIMU_POST = {
           author: "夏沐真凉",
-          title: "基于VMWare的家用服务器设置",
-          url: "http:\/\/localhost:1313\/post\/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE\/",
-          description: " 前言 有些地区的运营商不会给用户开放公网ip，如果有也可能是动态公网，使用起来特别不友好\n",
+          title: "ArchLinux安装教程（单盘双系统版）",
+          url: "http:\/\/localhost:1313\/post\/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88\/",
+          description: " 前言 本教程为自用，意在于记录搭建、部署、设置及美化所需的所有代码，可能不适合所有人，仅为个人设置模板\n",
           cover: "https:\/\/t.alcy.cc\/ycy",
         };
       </script><script src="/js/insert_highlight.js" data-pjax ></script><script src="/js/tabs.js" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {

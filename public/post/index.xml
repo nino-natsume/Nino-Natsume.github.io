@@ -12,12 +12,39 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Wed, 15 Apr 2026 11:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2026 22:51:01 +0900</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>ArchLinux安装教程（单盘双系统版）</title>
+      <link>http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/</link>
+      <pubDate>Mon, 04 May 2026 22:51:01 &#43;0900</pubDate>
+      <author>info@natsume.xin (夏沐真凉)</author>
+      <guid>http://localhost:1313/post/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%8D%95%E7%9B%98%E5%8F%8C%E7%B3%BB%E7%BB%9F%E7%89%88/</guid>
+      <description>
+        <![CDATA[<h1>ArchLinux安装教程（单盘双系统版）</h1><p>作者：夏沐真凉（info@natsume.xin）</p>
+        
+          <h2 id="前言">
+<a class="header-anchor" href="#%e5%89%8d%e8%a8%80"></a>
+前言
+</h2><p>本教程为自用，意在于记录搭建、部署、设置及美化所需的所有代码，可能不适合所有人，仅为个人设置模板</p>
+<h3 id="必备">
+<a class="header-anchor" href="#%e5%bf%85%e5%a4%87"></a>
+必备
+</h3><ol>
+<li>
+<p>已制作好的 ArchLinux 启动盘，使用 Refus 制作，注意选择分区类型为 GPT</p>
+        
+        <hr><p>本文2026-05-04首发于<a href='http://localhost:1313/'>次元星域</a>，最后修改于2026-05-04</p>]]>
+      </description>
+      
+    </item>
     
     
 
@@ -33,7 +60,7 @@
           <h3 id="调戏雑鱼">
 <a class="header-anchor" href="#%e8%b0%83%e6%88%8f%e9%9b%91%e9%b1%bc"></a>
 调戏雑鱼
-</h3><p>雑鱼~♡既然打开这边了那就说明你没有境外银行卡或PayPal账户导致无法开通Zero Trust，或者开通了不会操作吧<del>雑鱼</del>♡这么简单的操作，而且有这么详细的图解还操作不出，不愧是雑鱼呢~</p>
+</h3><p>雑鱼~♡既然打开这边了那就说明你没有境外银行卡或 PayPal 账户导致无法开通 Zero Trust，或者开通了不会操作吧~ 雑鱼~♡这么简单的操作，而且有这么详细的图解还操作不出，不愧是雑鱼呢~</p>
         
         <hr><p>本文2026-04-15首发于<a href='http://localhost:1313/'>次元星域</a>，最后修改于2026-04-15</p>]]>
       </description>
