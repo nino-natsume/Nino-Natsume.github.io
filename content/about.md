@@ -1,20 +1,16 @@
 ---
 title: 关于
-
 date: 2026-02-27T21:00:00+09:00
-draft: true
 ---
 ## 关于作者
-本人属经典工科宅男，无固定爱好，喜欢随性做事，遇到好的内容就整理成文章放到博客内
-
 目前已有的网站/站点：
 
-{{< link title="次元星域" link="https://107211.xyz" cover="auto" escape="true" >}}
-{{< link title="次元星域博客" link="https://blog.107211.xyz" cover="auto" escape="true" >}}
-{{< link title="博客镜像站" link="https://natsume.ct.ws" cover="auto" escape="true" >}}
-{{< link title="DLsite镜像站" link="https://1.1.5.6.2.8.0.7.4.0.1.0.0.2.ip6.arpa/" cover="auto" escape="true" >}}
+{{< link title="次元星域" link="https://107211.xyz/" cover="auto" escape="true" >}}
+{{< link title="次元星域博客" link="https://blog.107211.xyz/" cover="auto" escape="true" >}}
+{{< link title="私密即时聊天室" link="https://chat.107211.xyz/" cover="auto" escape="true" >}}
+{{< link title="桌面屏保" link="https://主页.107211.xyz/" cover="auto" escape="true" >}}
 ## 关于本站
-本站的所有文章均从[原wordpress博客](https://blog.natsume.xin)迁移而来，因国内服务器将于2026.10.10到期，且无其他国内服务器，故国内域名也将无法使用，为转移内容故建立此站
+本站的所有文章均从[原wordpress博客](https://blog.natsume.xin)迁移而来，因国内服务器将于2026.10.10到期，且无其他国内服务器，为转移内容故建立此站
 ### 本站特点
 1. 这是第一个特点！
 

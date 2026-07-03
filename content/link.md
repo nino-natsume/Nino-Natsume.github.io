@@ -2,7 +2,7 @@
 date: 2026-02-27T21:00:00+09:00
 draft: true
 ---
-{{< link title="次元星域仓库" link="https://pan.natsume.xin" cover="auto" escape="true" >}}
-{{< link title="次元星域小铺" link="https://store.natsume.xin" cover="auto" escape="true" >}}
-{{< link title="现wordpress博客" link="https://blog.natsume.xin" cover="auto" escape="true" >}}
-{{< link title="DLsite镜像站" link="https://1.1.5.6.2.8.0.7.4.0.1.0.0.2.ip6.arpa/" cover="auto" escape="true" >}}
+{{< link title="次元星域" link="https://107211.xyz/" cover="auto" escape="true" >}}
+{{< link title="次元星域博客" link="https://blog.107211.xyz/" cover="auto" escape="true" >}}
+{{< link title="私密即时聊天室" link="https://chat.107211.xyz/" cover="auto" escape="true" >}}
+{{< link title="桌面屏保" link="https://主页.107211.xyz/" cover="auto" escape="true" >}}

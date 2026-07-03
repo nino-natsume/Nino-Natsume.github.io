@@ -22,6 +22,25 @@
     
 
     <item>
+      <title>备用页面</title>
+      <link>http://localhost:1313/en/post/%E5%A4%87%E7%94%A8%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Sat, 28 Feb 2026 11:00:00 &#43;0900</pubDate>
+      <author>info@natsume.xin (夏沐真凉)</author>
+      <guid>http://localhost:1313/en/post/%E5%A4%87%E7%94%A8%E9%A1%B5%E9%9D%A2/</guid>
+      <description>
+        <![CDATA[<h1>备用页面</h1><p>Author: 夏沐真凉(info@natsume.xin)</p>
+        
+          <p>
+<a href="https://%e4%b8%bb%e9%a1%b5.107211.xyz/" title="桌面屏保" target="_blank">桌面屏保</a></p>
+        
+        <hr><p>Published on 2026-02-28 at <a href='http://localhost:1313/'>Jigen_Seiki</a>, last modified on 2026-02-28</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
       <title>基于VMWare的家用服务器设置</title>
       <link>http://localhost:1313/en/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Sat, 28 Feb 2026 11:00:00 &#43;0900</pubDate>

@@ -42,6 +42,25 @@
     
 
     <item>
+      <title>备用页面</title>
+      <link>http://localhost:1313/ja/post/%E5%A4%87%E7%94%A8%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Sat, 28 Feb 2026 11:00:00 &#43;0900</pubDate>
+      <author>info@natsume.xin (夏沐真凉)</author>
+      <guid>http://localhost:1313/ja/post/%E5%A4%87%E7%94%A8%E9%A1%B5%E9%9D%A2/</guid>
+      <description>
+        <![CDATA[<h1>备用页面</h1><p>著者: 夏沐真凉(info@natsume.xin)</p>
+        
+          <p>
+<a href="https://%e4%b8%bb%e9%a1%b5.107211.xyz/" title="桌面屏保" target="_blank">桌面屏保</a></p>
+        
+        <hr><p>この記事は2026-02-28に<a href='http://localhost:1313/'>次元星域</a>で公開され、最終更新日は2026-02-28です</p>]]>
+      </description>
+      
+    </item>
+    
+    
+
+    <item>
       <title>Hugoウェブサイト構築プロセス</title>
       <link>http://localhost:1313/ja/post/hugo%E5%BB%BA%E7%AB%99%E5%85%A8%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Sat, 28 Feb 2026 11:00:00 &#43;0900</pubDate>
