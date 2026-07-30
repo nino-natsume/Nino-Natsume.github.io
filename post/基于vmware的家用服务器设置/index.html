@@ -1,0 +1,1570 @@
+<!doctype html>
+<html
+  lang="zh-CN" 
+  data-theme-mode="auto"
+  >
+  <head><meta charset="utf-8" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no"
+/><title>
+  基于VMWare的家用服务器设置 | 夏沐真凉
+</title>
+<meta name="description" content="Ciallo～(∠・ω&lt; )⌒★"/><script>
+  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"base\":\"https://nino-natsume.github.io/\",\"clipboard\":{\"copyright\":{\"count\":50,\"enable\":false,\"license_type\":\"by-nc-sa\"},\"fail\":{\"en\":\"Copy failed (ﾟ⊿ﾟ)ﾂ\",\"ja\":\"コピー失敗 (ﾟ⊿ﾟ)ﾂ\",\"pt-br\":\"Falha ao copiar (ﾟ⊿ﾟ)ﾂ\",\"zh-cn\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"zh-tw\":\"複製失敗 (ﾟ⊿ﾟ)ﾂ\"},\"success\":{\"en\":\"Copy successfully (*^▽^*)\",\"ja\":\"コピー成功 (*^▽^*)\",\"pt-br\":\"Copiado com sucesso (*^▽^*)\",\"zh-cn\":\"复制成功 (*^▽^*)\",\"zh-tw\":\"複製成功 (*^▽^*)\"}},\"code_block\":{\"expand\":15},\"i18n_languages\":[{\"Lang\":\"zh-cn\",\"Title\":\"次元星域\",\"Weight\":1,\"Disabled\":false,\"Direction\":\"\",\"Label\":\"简体中文\",\"Locale\":\"zh-CN\"},{\"Lang\":\"zh-tw\",\"Title\":\"次元星域\",\"Weight\":2,\"Disabled\":false,\"Direction\":\"\",\"Label\":\"繁體中文\",\"Locale\":\"zh-TW\"},{\"Lang\":\"ja\",\"Title\":\"次元星域\",\"Weight\":3,\"Disabled\":false,\"Direction\":\"\",\"Label\":\"日本語\",\"Locale\":\"ja\"},{\"Lang\":\"en\",\"Title\":\"Jigen_Seiki\",\"Weight\":4,\"Disabled\":false,\"Direction\":\"\",\"Label\":\"English\",\"Locale\":\"en\"}],\"icon_font\":\"4552607_4k4bc36ef96\",\"outdate\":{\"daysago\":180,\"enable\":false,\"message\":{\"en\":\"This article was last updated on {time}. Please note that the content may no longer be applicable.\",\"ja\":\"この記事は最終更新日：{time}。記載内容が現在有効でない可能性がありますのでご注意ください。\",\"pt-br\":\"Este artigo foi atualizado pela última vez em {time}. Observe que o conteúdo pode não ser mais aplicável.\",\"zh-cn\":\"本文最后更新于 {time}，请注意文中内容可能已不适用。\",\"zh-tw\":\"本文最後更新於 {time}，請注意文中內容可能已不適用。\"}}}");
+  
+</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+/>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7cNoto%20Serif%20SC:400,400italic,700,700italic%7c&amp;display=swap"
+  media="print"
+  onload="this.media='all'"
+/>
+<link
+    rel="preload"
+    href="//at.alicdn.com/t/c/font_4552607_4k4bc36ef96.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  /><link rel="stylesheet" href="/css/loader.min.ac746e154f756f8220326eeb52a719f142ab038be5a8ddf30ea5ef15ef2356ea.css" /><meta property="og:type" content="website" />
+  <meta property="og:title" content="基于VMWare的家用服务器设置 | 夏沐真凉" />
+  <meta
+    property="og:description"
+    content="Ciallo～(∠・ω&lt; )⌒★"
+  />
+  <meta property="og:url" content="https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/" />
+  <meta
+    property="og:site_name"
+    content="次元星域"
+  />
+  <meta
+    property="og:image"
+    content="/"
+  />
+  <meta property="article:author" content="夏沐真凉" />
+  <meta property="article:published_time" content="2026-03-01T11:00:00&#43;09:00" />
+  <meta property="article:modified_time" content="2026-03-01T11:00:00&#43;09:00" /><meta property="article:tag" content="次元星域Hugo教程" /><meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="/" />
+<link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/main.min.36ea1ab99a941d8c19b6807cda49b5c787fc996c7a1b4409ac8c4ee2ed035053.css" /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css"
+    integrity="sha384-IfxC36XL/toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei&#43;Zx/1oA/0l8ysE" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="preload"
+    as="style"
+    href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css"
+    integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz&#43;YI" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'"
+  /><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css"
+    integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy&#43;Ub9QgnxUYJmwOhYCK" crossorigin="anonymous"/><script
+    src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"
+    
+    
+    
+    
+    integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css"
+    integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous"/><link
+    rel="stylesheet"
+    href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css"
+    integrity="sha384-tLMkTWh2pfXNWGFlUS0w1TFtRG5xZ9lPWFOooj&#43;vDDLIL&#43;xBGQU/voDBY5XE2lVh" crossorigin="anonymous"/></head>
+  <body><div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate"><svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+          M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg></div><div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script><div id="copy-tooltip"></div>
+<div id="lang-tooltip">
+本文章没有找到对应的语言版本
+</div>
+<div id="heatmap-tooltip"></div><div id="container">
+      <div id="wrap"><div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation"><a class="main-nav-link-wrap" href="/"><div class='main-nav-icon icon '>&#xe638;</div>
+        <span class="main-nav-link">首页</span>
+      </a><a class="main-nav-link-wrap" href="/archives"><div class='main-nav-icon icon '>&#xe63d;</div>
+        <span class="main-nav-link">归档</span>
+      </a><a class="main-nav-link-wrap" href="/about"><div class='main-nav-icon icon '>&#xe633;</div>
+        <span class="main-nav-link">关于</span>
+      </a><a class="main-nav-link-wrap" href="/link"><div class='main-nav-icon icon '>&#xe639;</div>
+        <span class="main-nav-link">更多</span>
+      </a><a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation"><a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索" aria-label="搜索"></a></nav><nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">简体中文</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages"><li data-value="zh-cn" role="option" class="selected" arial-selected="true" >简体中文</li><li data-value="zh-tw" role="option" arial-selected="false" >繁體中文</li><li data-value="ja" role="option" arial-selected="false" >日本語</li><li data-value="en" role="option" arial-selected="false" >English</li></ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};langMap['ja'] = '\/ja\/post\/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE\/';langMap['en'] = '\/en\/post\/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE\/';selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            if (item.dataset.value === 'zh-cn') {
+              return;
+            }
+            if (!langMap[item.dataset.value]) {
+              _$("#lang-tooltip").style.opacity = "1";
+              setTimeout(() => {
+                _$("#lang-tooltip").style.opacity = "0";
+              }, 1000);
+              return;
+            }
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav><a href="https://github.com/nino-natsume/" class="triangle-badge" title="github" target="_blank" rel="noopener nofollow noreferrer">
+      <div class="icon icon-github triangle-badge-icon"></div>
+    </a></div>
+<header id="header" aria-label="Site header"><picture></picture><img  fetchpriority="high" src="https://t.alcy.cc/ycy" alt="基于VMWare的家用服务器设置"><div id="header-outer">
+    <div id="header-title"><span id="logo">
+            <h1 data-aos="slide-up">基于VMWare的家用服务器设置</h1>
+          </span><h2 id="subtitle-wrap" data-aos="slide-down"></h2></div>
+  </div>
+</header><div id="content"
+          aria-label="Page content"
+          class="sidebar-left"
+            ><aside id="sidebar" aria-label="Sidebar"><div class="sidebar-wrapper-container sticky"><div class="sidebar-wrapper">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    ><div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#前言">前言</a>
+          <ol>
+            <li><a href="#必备准备">必备准备</a></li>
+          </ol>
+        </li>
+        <li><a href="#前期操作">前期操作</a>
+          <ol>
+            <li><a href="#创建服务器">创建服务器</a></li>
+            <li><a href="#服务器配置">服务器配置</a></li>
+          </ol>
+        </li>
+        <li><a href="#cloudflare的内网穿透设置">Cloudflare的内网穿透设置</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+</div></div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.png"
+    data-sizes="auto"
+    alt="夏沐真凉"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">夏沐真凉</div>
+  <div class="sidebar-description">Ciallo～(∠・ω&lt; )⌒★</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">10</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      1
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>标签</div>
+    <div class="sidebar-state-number">3</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-bilibili sidebar-social-icon">
+      <a
+        href="https://space.bilibili.com/3691012213967375"
+        itemprop="url"
+        target="_blank"
+        aria-label="bilibili"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div><div class="icon-email sidebar-social-icon">
+      <a
+        href="#ZgotmplZ"
+        itemprop="url"
+        target="_blank"
+        aria-label="email"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div><div class="icon-github sidebar-social-icon">
+      <a
+        href="https://github.com/nino-natsume"
+        itemprop="url"
+        target="_blank"
+        aria-label="github"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div><div class="icon-telegram sidebar-social-icon">
+      <a
+        href="https://t.me/nino_natsume0721"
+        itemprop="url"
+        target="_blank"
+        aria-label="telegram"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="首页"
+      ></a><div class='sidebar-menu-icon icon '>&#xe638;</div>
+      <div class="sidebar-menu-link">首页</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="归档"
+      ></a><div class='sidebar-menu-icon icon '>&#xe63d;</div>
+      <div class="sidebar-menu-link">归档</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="关于"
+      ></a><div class='sidebar-menu-icon icon '>&#xe633;</div>
+      <div class="sidebar-menu-link">关于</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/link"
+        aria-label="更多"
+      ></a><div class='sidebar-menu-icon icon '>&#xe639;</div>
+      <div class="sidebar-menu-link">更多</div>
+    </div></div></div><div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div></div>
+  </div><div class="sidebar-widget"></div></div></aside>
+<section id="main" aria-label="Main content"><article
+  class="h-entry article"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta"><div class="article-date">
+  <span
+    class="article-date-link icon-calendar"
+    data-aos="zoom-in"
+  >
+    <time datetime="2026-03-01 11:00:00 &#43;0900 &#43;0900" itemprop="datePublished"
+      >2026-03-01</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2026-03-01</time
+    >
+  </span></div>
+</div><div class="hr-line"></div><div class="e-content article-entry" itemprop="articleBody"><link rel="stylesheet" href="/css/heat-map.min.f0ed6b92b1d5e3a11b04c6fb247880e74d24b5aac1f3bbf2a73ed8b35a0a35af.css" /><div id="heatmap"></div>
+<div id="heatmap-tooltip"></div>
+<script>
+var MONTH_NAMES = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+var pluralize = (num, word) => (`${num} ${word}${num <= 1 ? '' : 's'}`);
+
+function getTooltip(contributionDay, contributionDate) {
+  
+  const formattedDate = new Date(
+    contributionDate.getTime() - contributionDate.getTimezoneOffset() * 60000,
+  )
+    .toISOString()
+    .split("T")[0];
+
+  if (contributionDay.count === 0) {
+    return `No writing on ${formattedDate}`;
+  }
+
+  const postText = pluralize(contributionDay.post, "post");
+  const wordText = pluralize(contributionDay.count, "word");
+
+  return `${postText} ${wordText} on ${formattedDate}`;
+}
+
+
+const heatmapTooltip = document.getElementById("heatmap-tooltip");
+
+function hideTooltip() {
+  heatmapTooltip.style.display = 'none';
+}
+
+function tileClickHandler(event) {
+  console.log("Tile clicked:", event);
+  const tile = event.target;
+  if (!tile.classList.contains("tile")) return;
+  
+  const date = new Date(Number(tile.dataset.date));
+  const dateStr = date.toISOString().split('T')[0];
+  
+  
+  const articles = articleStats.filter(article => {
+    return article.date === dateStr;
+  });
+  
+  const level = tile.dataset.level;
+  const formattedDate = date.toLocaleDateString();
+  let totalWords = 0;
+  
+  let html = `
+    <div class="tooltip-header">
+      <div class="tooltip-header-content">${formattedDate} (Level ${level})</div>
+      <div class="tooltip-close">×</div>
+    </div>
+    <div class="tooltip-content">
+      <ul>
+  `;
+
+  if (articles.length === 0) {
+    html += `<li>没有文章</li>`;
+  } else {
+    articles.forEach(article => {
+      totalWords += article.wordcount;
+      html += `<li><a href="${article.url}">${article.title}</a> (${article.wordcount} 词)</li>`;
+    });
+  }
+  
+  html += `
+      </ul>
+      <div class="tooltip-footer">
+        共 ${articles.length} 篇文章，${totalWords} 字
+      </div>
+    </div>
+  `;
+  
+  
+  heatmapTooltip.innerHTML = html;
+  
+  
+  const rect = tile.getBoundingClientRect();
+  const tooltipWidth = 250; 
+  
+  
+  let left = rect.right + 10;
+  if (left + tooltipWidth > window.innerWidth) {
+    left = rect.left - tooltipWidth - 10;
+  }
+  
+  
+  heatmapTooltip.style.left = `${left}px`;
+  heatmapTooltip.style.top = `${rect.top}px`;
+  heatmapTooltip.style.display = 'block';
+  
+  
+
+  const closeBtn = heatmapTooltip.querySelector('.tooltip-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', hideTooltip);
+  }
+  
+  
+  document.addEventListener('click', function closeTooltipOnClickOutside(e) {
+    if (e.target.classList.contains('tile')) {
+        return;
+    }
+    if (!heatmapTooltip.contains(e.target) && e.target !== tile) {
+      hideTooltip();
+      document.removeEventListener('click', closeTooltipOnClickOutside);
+    }
+  });
+}
+
+function createCalendar(element, contributionData) {
+  if (!element) {
+    return;
+  }
+  element.innerHTML = `
+    <div class="outer-box">
+      <div class="year-select"></div>
+      <div class="inner-box">
+        <div class="calendar-container">
+          ${["Mon", "Wed", "Fri"].map((t) => `<span class="week">${t}</span>`).join("")}
+          <div class="legend">Less${new Array(5)
+            .fill(0)
+            .map((_, i) => `<i class="tile" data-level="${i}"></i>`)
+            .join("")}More</div>
+          <div class="tiles"></div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const calendarContainer = element.querySelector(".calendar-container");
+  const yearSelector = element.querySelector(".year-select");
+  const tilesContainer = element.querySelector(".tiles");
+
+  const allContributionData = completeContributionData(contributionData);
+  const currentDisplayYear = new Date().getFullYear();
+
+  yearSelector.innerHTML = Object.keys(allContributionData)
+    .sort((a, b) => b - a)
+    .map(
+      (year) =>
+        `<div class="year-option ${year == currentDisplayYear ? "active" : ""}">${year}</div>`,
+    )
+    .join("");
+
+  yearSelector.addEventListener("click", ({ target }) => {
+    if (target.classList.contains("year-option")) {
+      element.querySelector(".active")?.classList.remove("active");
+      target.classList.add("active");
+      generateYearContributions(target.textContent);
+    }
+  });
+
+  const generateYearContributions = (year) => {
+    tilesContainer.innerHTML = "";
+    calendarContainer.querySelectorAll(".month").forEach((m) => m.remove());
+    calendarContainer.querySelectorAll(".total").forEach((t) => t.remove());
+    const data = allContributionData[year];
+    const startRow = new Date(data[0].date).getDay();
+    let latestMonth = -1;
+
+    const monthFragment = document.createDocumentFragment();
+    const tilesFragment = document.createDocumentFragment();
+
+    const [tiles, totalStatistical] = data.reduce(
+      ([tiles, stats], c, i) => {
+        const date = new Date(c.date);
+        const month = date.getMonth();
+
+        
+        stats.count += c.count;
+        stats.post += c.post;
+
+        
+        if (date.getDay() === 0 && month !== latestMonth) {
+          const gridColumn = 2 + Math.floor((i + startRow) / 7);
+          latestMonth = month;
+          const monthLabel = document.createElement("span");
+          monthLabel.className = "month";
+          monthLabel.textContent = MONTH_NAMES[month];
+          monthLabel.style.gridColumn = gridColumn;
+          monthFragment.append(monthLabel);
+        }
+        
+        const tile = document.createElement("i");
+        tile.className = "tile";
+        tile.dataset.level = c.level;
+        tile.title = getTooltip(c, date);
+        tile.dataset.level = c.level;
+        tile.dataset.date = c.date; 
+        tile.addEventListener('click', tileClickHandler);
+        
+        
+
+        tiles.push(tile);
+        return [tiles, stats];
+      },
+      [[], { count: 0, post: 0 }],
+    );
+
+    
+    if (tiles[0]) {
+      tiles[0].style.gridRow = startRow + 1;
+    }
+
+    tilesFragment.append(...tiles);
+
+    calendarContainer.append(monthFragment);
+    tilesContainer.append(tilesFragment);
+
+    calendarContainer.insertAdjacentHTML(
+      "beforeend",
+      `<div class="total">${pluralize(totalStatistical.post, "post")} ${pluralize(totalStatistical.count, "word")} in ${year}</div>`,
+    );
+  };
+
+  
+  generateYearContributions(currentDisplayYear);
+}
+
+function completeContributionData(userData) {
+  
+  userData.sort((a, b) => a.date - b.date);
+
+  
+  const startDate = new Date(userData[0].date);
+  const currentDate = new Date();
+
+  
+  const allData = {};
+  
+  const userDataMap = {};
+  userData.forEach((data) => {
+    const dataDate = new Date(data.date);
+    const key = `${dataDate.getFullYear()}-${dataDate.getMonth()}-${dataDate.getDate()}`;
+    userDataMap[key] = data;
+  });
+
+  
+  for (
+    let year = startDate.getFullYear();
+    year <= currentDate.getFullYear();
+    year++
+  ) {
+    const [startYear, endYear] =
+      year === currentDate.getFullYear()
+        ? [
+            new Date(
+              new Date(currentDate).setDate(currentDate.getDate() - 365),
+            ),
+            new Date(currentDate.getTime() + 86400000),
+          ]
+        : [new Date(year, 0, 1), new Date(year + 1, 0, 1)];
+
+    const yearData = [];
+    for (let d = startYear; d < endYear; d.setDate(d.getDate() + 1)) {
+      const key = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+      yearData.push(
+        userDataMap[key] || {
+          level: 0,
+          date: d.getTime(),
+          count: 0,
+          post: 0,
+        },
+      );
+    }
+    allData[year] = yearData;
+  }
+  return allData;
+}
+
+
+var articleStats = [{"date":"2026-02-28","lastmod":"2026-02-28","title":"Hugo建站全流程","url":"/post/hugo%E5%BB%BA%E7%AB%99%E5%85%A8%E6%B5%81%E7%A8%8B/","wordcount":9145},{"date":"2026-07-30","lastmod":"2026-07-30","title":"SP970随身WiFi刷入Debian系统","url":"/post/sp970%E9%9A%8F%E8%BA%ABwifi%E5%88%B7%E5%85%A5debian%E7%B3%BB%E7%BB%9F%E5%AE%9E%E8%AE%B0/","wordcount":324},{"date":"2026-07-30","lastmod":"2026-07-30","title":"基于CF的优选域名搭建(其一：使用华为云)","url":"/post/%E5%9F%BA%E4%BA%8Ecf-+-%E5%8D%8E%E4%B8%BA%E4%BA%91%E7%9A%84%E4%BC%98%E9%80%89%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA/","wordcount":1095},{"date":"2026-07-02","lastmod":"2026-07-02","title":"ArchLinux Niri桌面 安装教程","url":"/post/archlinux-niri%E6%A1%8C%E9%9D%A2-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/","wordcount":987},{"date":"2026-05-05","lastmod":"2026-05-05","title":"ArchLinux - KDE桌面 安装教程","url":"/post/archlinux--kde%E6%A1%8C%E9%9D%A2-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/","wordcount":726},{"date":"2026-04-15","lastmod":"2026-04-15","title":"基于CF worker方法的DOH搭建","url":"/post/%E5%9F%BA%E4%BA%8Ecf-worker%E6%96%B9%E6%B3%95%E7%9A%84doh%E6%90%AD%E5%BB%BA/","wordcount":9663},{"date":"2026-02-28","lastmod":"2026-02-28","title":"备用页面","url":"/post/%E5%A4%87%E7%94%A8%E9%A1%B5%E9%9D%A2/","wordcount":26},{"date":"2026-02-27","lastmod":"2026-02-27","title":"","url":"/link/","wordcount":46},{"date":"2026-02-27","lastmod":"2026-02-27","title":"关于","url":"/about/","wordcount":199},{"date":"2026-02-27","lastmod":"2026-02-27","title":"一个人的观察与体会","url":"/post/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E8%A7%82%E5%AF%9F%E4%B8%8E%E4%BD%93%E4%BC%9A/","wordcount":1060},{"date":"2026-02-27","lastmod":"2026-02-27","title":"次元星域——一个简易的二次元小站","url":"/post/%E6%AC%A1%E5%85%83%E6%98%9F%E5%9F%9F%E4%B8%80%E4%B8%AA%E7%AE%80%E6%98%93%E7%9A%84%E4%BA%8C%E6%AC%A1%E5%85%83%E5%B0%8F%E7%AB%99/","wordcount":307}];
+
+function getLevelFromWordCount(totalCount) {
+  const levelStandard = "200,500,5000".split(",").map(Number);
+  if (totalCount <= 0) return 0;
+  if (totalCount <= levelStandard[0]) return 1;
+  if (totalCount <= levelStandard[1]) return 2;
+  if (totalCount <= levelStandard[2]) return 3;
+  return 4;
+}
+
+function transformArticlesData(articlesData) {
+  const dailyStats = articlesData.reduce((map, { date, wordcount }) => {
+    const entry = map.get(date) ?? { count: 0, post: 0 };
+    return map.set(date, {
+      count: entry.count + wordcount,
+      post: entry.post + 1,
+    });
+  }, new Map());
+
+  return Array.from(dailyStats, ([dayStr, { count, post }]) => ({
+    level: getLevelFromWordCount(count),
+    date: new Date(dayStr).getTime(),
+    count,
+    post,
+  }));
+}
+
+createCalendar(document.querySelector("#heatmap"), transformArticlesData(articleStats));
+</script>
+<h2 id="前言">
+<a class="header-anchor" href="#%e5%89%8d%e8%a8%80"></a>
+前言
+</h2><p>有些地区的运营商不会给用户开放公网ip，如果有也可能是动态公网，使用起来特别不友好</p>
+<p>如果用户有建站的需求，那么他大概率会想到在服务器商处购买服务器和域名，在国内的服务器还需要备案等，非常麻烦对吧？</p>
+<p>但是，如果我说现在有种方案，只要你有一部可上网的电脑、一个国外域名即可无需服务器完成网站外网访问，那么，你，会选择尝试吗？</p>
+<p>本方案类似于 Nas 搭建服务器，部分操作几乎一致</p>
+<h3 id="必备准备">
+<a class="header-anchor" href="#%e5%bf%85%e5%a4%87%e5%87%86%e5%a4%87"></a>
+必备准备
+</h3><p>在完成本项前请确保你已拥有以下东西：</p>
+<ol>
+<li>
+<p>一部可正常上网的电脑</p>
+</li>
+<li>
+<p>一个 Cloudflare 账号</p>
+</li>
+<li>
+<p>已在 Cloudflare 解析的 <strong>国外</strong>域名</p>
+</li>
+<li>
+<p>【非必须】一个空间足够大的外接硬盘，仅为有多余硬盘的用户操作</p>
+</li>
+</ol>
+<h2 id="前期操作">
+<a class="header-anchor" href="#%e5%89%8d%e6%9c%9f%e6%93%8d%e4%bd%9c"></a>
+前期操作
+</h2><h3 id="创建服务器">
+<a class="header-anchor" href="#%e5%88%9b%e5%bb%ba%e6%9c%8d%e5%8a%a1%e5%99%a8"></a>
+创建服务器
+</h3><ol>
+<li>自行下载和安装VMWare 25H2，并创建典型虚拟机，配置可按下方表格设置</li>
+</ol>
+<p>表格的每行代表一个步骤，含 <em>&amp;</em> 的表示该步骤内有选填项，需按实际修改或操作</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">步骤</th>
+					<th style="text-align: center">设置</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">install from:</td>
+					<td style="text-align: center">I will install the operating system later.</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Guest operating system &amp; Version</td>
+					<td style="text-align: center">Linux &amp; Debian 13 x64位</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Virtual machine name &amp; Location</td>
+					<td style="text-align: center">Debian 13 &amp; D:\Desktop\VMWare</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">最大磁盘大小（GB）</td>
+					<td style="text-align: center">20 &amp; 将虚拟磁盘拆分成多个文件</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">已准备好创建虚拟机</td>
+					<td style="text-align: center">完成</td>
+			</tr>
+	</tbody>
+</table>
+<p>设置虚拟机，点击编辑虚拟机设置：</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">设备</th>
+					<th style="text-align: center">摘要</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">内存</td>
+					<td style="text-align: center">4GB（以物理机配置灵活调节）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">处理器</td>
+					<td style="text-align: center">4（以物理机配置灵活调节）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">硬盘</td>
+					<td style="text-align: center">20GB（建议40GB，以物理机配置灵活调节，若使用外接硬盘，此项应删除，创建好系统后再添加）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">CD/DVD(SATA)</td>
+					<td style="text-align: center">选择系统镜像文件所在路径</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">网络适配器</td>
+					<td style="text-align: center">NAT（或桥接，视需求决定）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">USB控制器</td>
+					<td style="text-align: center">USB 3.2 &amp; 显示所有 USB 输入设备</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">声卡</td>
+					<td style="text-align: center">此项删除</td>
+			</tr>
+	</tbody>
+</table>
+<details class="details custom-block">
+  <summary>补充说明</summary>
+  <div class="details-content"><ol>
+<li>
+<p>VMWare可视需求自行选择是否使用汉化，当前汉化包翻译可能不完全，但足够日常使用了</p>
+</li>
+<li>
+<p>若使用外接硬盘，此项必做，请先删除【设置】中【硬盘】项，退出VMWare，使用管理员权限打开，进入设置界面，选择硬盘，设置内会显示 PhysicalDriver0 或 PhysicalDriver1 等，找到对应你外接硬盘的硬盘大小的物理磁盘后点击保存，再按上表配置其他设置</p>
+</li>
+<li>
+<p>系统镜像文件可在<a href="https://pan.107211.xyz/s/aycw">此处</a>获取</p>
+</li>
+<li>
+<p>【网络适配器】栏的选择，若想让虚拟机独占一个 ip 选择桥接，否则选择 NAT，配置桥接的方法将在下方讲解，可在下方查看</p>
+</li>
+</ol>
+</div>
+</details>
+<ol start="2">
+<li>
+<p>保存设置后，正式进入系统安装界面，本过程预计耗时30min，需随时查看安装进度以进入下一安装步骤</p>
+</li>
+<li>
+<p>根据以下配置完成系统安装</p>
+</li>
+</ol>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">步骤</th>
+					<th style="text-align: center">设置</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">启动界面</td>
+					<td style="text-align: center">Graphical install（若使用 install，即命令行安装，操作与下一致）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">选择语言、国家、时区</td>
+					<td style="text-align: center">Chinese &amp; China &amp; China</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">主机名 &amp; 域名 &amp; 密码</td>
+					<td style="text-align: center">任意，如ciallo &amp; 留空 &amp; 自行输入</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">普通用户全名 &amp; 登录用户名 &amp; 密码</td>
+					<td style="text-align: center">任意 &amp; 任意 &amp; 任意</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">磁盘选择 &amp; 选择磁盘</td>
+					<td style="text-align: center">使用整个磁盘（Guided - use entire disk） &amp; SCSI? （根据自己设的大小选择）</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">选择分区模式 &amp; 完成并保存分区</td>
+					<td style="text-align: center">所有目录都在根目录 &amp; 完成分区 &amp; 将改动应用至磁盘</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">可选项</td>
+					<td style="text-align: center"><strong>不</strong>扫描额外介质 &amp; 启用网络镜像？（此处选 <strong>是</strong> &amp; ustc.edu.cn）&amp; <strong>不</strong>统计使用情况</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">选择安装的软件 <strong>【此项必须一致，不然后续使用会有影响】</strong></td>
+					<td style="text-align: center">Debian desktop environment &amp; web server &amp; SSH server &amp; standard system utilities</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">是否安装GRUB引导器至磁盘？</td>
+					<td style="text-align: center">是 &amp; /dev/sda</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">等待重启</td>
+					<td style="text-align: center">继续</td>
+			</tr>
+	</tbody>
+</table>
+<ol start="4">
+<li>待重启后，使用普通用户的密码登录后，即可成功进入系统</li>
+</ol>
+<h3 id="服务器配置">
+<a class="header-anchor" href="#%e6%9c%8d%e5%8a%a1%e5%99%a8%e9%85%8d%e7%bd%ae"></a>
+服务器配置
+</h3><p>打开系统终端（VMWare的，不是你物理机的），选择安装 <strong>宝塔面板</strong>或 <strong>1panel</strong>管理面板，这里以 1panel 为例</p>
+<ol>
+<li>打开终端后，输入 <code>su</code> ，输入管理员密码进入root模式，再输入以下代码完成初始环境和面板安装，1panel按自行喜好设置</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt-get install -y curl
+</span></span><span class="line"><span class="cl">bash -c &#34;$(curl -sSL https://resource.fit2cloud.com/1panel/package/v2/quick_start.sh)&#34;
+</span></span></code></pre></div><details class="details custom-block">
+  <summary>桥接模式设置（仅虚拟机设置了桥接时配置）</summary>
+  <div class="details-content"><ol>
+<li>
+<p>关闭 VMWare，以管理员权限启动，点击菜单的【编辑】 - 【虚拟网络编辑器】，点击右下角的【变更设置】，修改VMnet0 的网卡为你自己 <strong>实际在用的网卡</strong>，点击保存，再启动虚拟机</p>
+</li>
+<li>
+<p>进入管理面板后，点击【终端】，输入 <code>ip address</code>，查看第二个设备的设备名，记住它</p>
+</li>
+<li>
+<p>点击【系统】 - 【文件】，打开 <code>/etc/network/interfaces</code> 文件，在文件内添加以下代码后，保存</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">auto [你的第二个设备名，要删外面括号]
+</span></span><span class="line"><span class="cl">iface [你的第二个设备名，要删外面括号] inet static
+</span></span><span class="line"><span class="cl">address 192.168.x.y                        # 输入你要给设备的ip，需确保不会与同网段ip冲突      
+</span></span><span class="line"><span class="cl">netmask 255.255.255.0
+</span></span><span class="line"><span class="cl">gateway 192.168.x.1                        # 输入设备网关，x是你上面填的值
+</span></span></code></pre></div><ol start="4">
+<li>打开 <code>/etc/resolv.conf</code> 文件，输入以下内容并保存</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nameserver 114.114.115.115
+</span></span><span class="line"><span class="cl">nameserver 8.8.8.8
+</span></span><span class="line"><span class="cl">nameserver 8.8.4.4
+</span></span></code></pre></div><ol start="5">
+<li>打开【终端】，再次输入 <code>ip address</code>，查看设备是否为你给设备配置的ip，若是则完成桥接模式的配置，否则返回去检查</li>
+</ol>
+</div>
+</details>
+<ol start="2">
+<li>任意在应用商店安装一个应用，注意记得勾选 <strong>端口外部访问</strong>，若可通过 <code>内网ip:端口</code>的方式访问则基本服务正常</li>
+</ol>
+<h2 id="cloudflare的内网穿透设置">
+<a class="header-anchor" href="#cloudflare%e7%9a%84%e5%86%85%e7%bd%91%e7%a9%bf%e9%80%8f%e8%ae%be%e7%bd%ae"></a>
+Cloudflare的内网穿透设置
+</h2><ol>
+<li>
+<p>打开Cloudflare，点击侧边栏【保护和连接】 - 【联网】 - 【Tunnels】，创建隧道，名字任意，点击【取消】</p>
+</li>
+<li>
+<p>点击刚创建的隧道，在【副本】选择系统（若使用本教程镜像应选择 Debian - arm64），复制最下面的代码至桌面的某个文件内备用，下方为参考示例</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-隧道_例.md" data-lang="隧道_例.md"><span class="line"><span class="cl">cloudflared tunnel run --token eyJhIjoiMWM4YjY2ZmVlOWRkMzljMzE4OTg3MjZjZmY0NWFmMDgiLCJ0IjoiNDMyZDNk00QtNjc5NS00MmE5LWJiN2ItNDZjMGFhZjNkZjM2IiwicyI6Ik9HWTJNbVl6TmpRdFlUWTBOaTAwTlRJM0xUaGtZMkl0WlRjME9UWm1OV1kwWkRZdyJ9
+</span></span></code></pre></div><ol start="3">
+<li>在虚拟机的期望文件夹内创建一个文件 docker-compose.yml ，输入以下代码并保存</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version: &#39;3.3&#39;
+</span></span><span class="line"><span class="cl">services:
+</span></span><span class="line"><span class="cl">  cloudflared:
+</span></span><span class="line"><span class="cl">    image: cloudflare/cloudflared:latest
+</span></span><span class="line"><span class="cl">    container_name: cloudflared
+</span></span><span class="line"><span class="cl">    restart: unless-stopped
+</span></span><span class="line"><span class="cl">    command: tunnel run
+</span></span><span class="line"><span class="cl">    environment:
+</span></span><span class="line"><span class="cl">      - TUNNEL_TOKEN=eyJhxxxxxxxxxxxxxxxxxxxxdyJ9  # 提供 Token
+</span></span></code></pre></div><ol start="4">
+<li>
+<p>在当前文件夹的终端输入 <code>sudo docker compose up -d</code> 启动服务，返回Cloudflare，若状态为 健康，则隧道搭建完成</p>
+</li>
+<li>
+<p>隧道用法：点击【路由】 - 【添加路由】 - 【已发布的应用程序】，按照需求输入和选择域名，可参考下方示例填写</p>
+</li>
+</ol>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">对应项</th>
+					<th style="text-align: center">参考值</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">子域（可选）</td>
+					<td style="text-align: center">anime</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">域</td>
+					<td style="text-align: center">ciallo.cc</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">路径（可选）</td>
+					<td style="text-align: center">留空</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">服务URL</td>
+					<td style="text-align: center">http://192.168.91.78:721</td>
+			</tr>
+	</tbody>
+</table>
+<ol start="6">
+<li>等待自动添加好CNAME记录后，访问域名，正常显示网页即成功</li>
+</ol>
+</div>
+    <footer class="article-footer"><blockquote class="article-copyright"><p><strong><span class="icon-user icon"></span>本文作者：</strong>夏沐真凉</p><p>
+      <strong><span class="icon-link icon"></span>本文链接：</strong><a href="https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/">https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/</a>
+    </p><p><strong><span class="icon-pencil icon"></span>本文标题：</strong>基于VMWare的家用服务器设置</p><p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2026-03-01 11:00:00</p><p>
+      
+      <strong><span class="icon-copyright icon"></span>本文版权：</strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener nofollow noreferrer" target="_blank"><span class="icon-creative-commons"></span>BY-NC-SA</a> 许可协议。转载请注明出处！
+    </p>
+    <span class="icon-creative-commons article-copyright-bg"></span></blockquote>
+<div class="share-wrapper"><a href="https://www.facebook.com/sharer/sharer.php?u=https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+      <div class="share-icon icon icon-facebook"></div>
+    </a><a href="https://twitter.com/intent/tweet?url=https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;text=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;via=https://nino-natsume.github.io/" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+      <div class="share-icon icon icon-twitter"></div>
+    </a><a href="https://www.linkedin.com/shareArticle?url=https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;summary=%20%e5%89%8d%e8%a8%80%20%e6%9c%89%e4%ba%9b%e5%9c%b0%e5%8c%ba%e7%9a%84%e8%bf%90%e8%90%a5%e5%95%86%e4%b8%8d%e4%bc%9a%e7%bb%99%e7%94%a8%e6%88%b7%e5%bc%80%e6%94%be%e5%85%ac%e7%bd%91ip%ef%bc%8c%e5%a6%82%e6%9e%9c%e6%9c%89%e4%b9%9f%e5%8f%af%e8%83%bd%e6%98%af%e5%8a%a8%e6%80%81%e5%85%ac%e7%bd%91%ef%bc%8c%e4%bd%bf%e7%94%a8%e8%b5%b7%e6%9d%a5%e7%89%b9%e5%88%ab%e4%b8%8d%e5%8f%8b%e5%a5%bd%0a&amp;mini=true&amp;ro=true" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+      <div class="share-icon icon icon-linkedin"></div>
+    </a><a href="https://www.reddit.com/submit?url=https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+      <div class="share-icon icon icon-reddit"></div>
+    </a><a href="https://service.weibo.com/share/share.php?url=https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;appkey=&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+      <div class="share-icon icon icon-weibo"></div>
+    </a><a href="https://connect.qq.com/widget/shareqq/index.html?url=https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/&amp;title=%e5%9f%ba%e4%ba%8eVMWare%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae&amp;desc=%20%e5%89%8d%e8%a8%80%20%e6%9c%89%e4%ba%9b%e5%9c%b0%e5%8c%ba%e7%9a%84%e8%bf%90%e8%90%a5%e5%95%86%e4%b8%8d%e4%bc%9a%e7%bb%99%e7%94%a8%e6%88%b7%e5%bc%80%e6%94%be%e5%85%ac%e7%bd%91ip%ef%bc%8c%e5%a6%82%e6%9e%9c%e6%9c%89%e4%b9%9f%e5%8f%af%e8%83%bd%e6%98%af%e5%8a%a8%e6%80%81%e5%85%ac%e7%bd%91%ef%bc%8c%e4%bd%bf%e7%94%a8%e8%b5%b7%e6%9d%a5%e7%89%b9%e5%88%ab%e4%b8%8d%e5%8f%8b%e5%a5%bd%0a&amp;source=https://nino-natsume.github.io/" target="_blank" rel="noopener noreferrer" title="基于VMWare的家用服务器设置">
+      <div class="share-icon icon icon-qq"></div>
+    </a><a href="javascript:;"  title="基于VMWare的家用服务器设置">
+      <div class="share-icon icon icon-weixin"><div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hugo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div></div>
+    </a></div><a
+          data-aos="zoom-in"
+          href="/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/#comments"
+          class="article-comment-link"
+        >
+          <span
+            class="post-comments-count waline-comment-count"
+            data-path="/post/%e5%9f%ba%e4%ba%8evmware%e7%9a%84%e5%ae%b6%e7%94%a8%e6%9c%8d%e5%8a%a1%e5%99%a8%e8%ae%be%e7%bd%ae/"
+            itemprop="commentCount"
+          ></span>
+          留言
+        </a><span
+          data-aos="zoom-in"
+          class="article-visitor-link"
+        >
+          <span
+            class="waline-pageview-count"
+            data-path="/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/"
+            >0</span
+          >
+          <em class="post-meta-item-text">阅读量</em>
+        </span><ul class="article-category-list"><li class="article-tag-list-item" data-aos="zoom-in">
+    <a
+      class="article-category-link"
+      href="/categories/%e6%ac%a1%e5%85%83%e6%98%9f%e5%9f%9f"
+      data-aos="zoom-in"
+      >次元星域</a
+    >
+    </li></ul>
+<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/%e6%ac%a1%e5%85%83%e6%98%9f%e5%9f%9f"
+        rel="tag"
+        >次元星域</a
+      >
+    </li><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/hugo"
+        rel="tag"
+        >Hugo</a
+      >
+    </li><li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/%e6%95%99%e7%a8%8b"
+        rel="tag"
+        >教程</a
+      >
+    </li></ul>
+</footer>
+  </div><nav
+    id="article-nav"
+    aria-label="Article navigation"
+    data-aos="fade-up"
+  ><div class="article-nav-link-wrap left"><img
+              data-src="https://tc.alcy.cc/tc/20260121/6b6f4cfab62eba8f064014fd83d6ddaa.webp"
+              data-sizes="auto"
+              alt="备用页面"
+              class="lazyload"
+            /><a
+          href="/post/%E5%A4%87%E7%94%A8%E9%A1%B5%E9%9D%A2/"
+          aria-label="前一篇:备用页面"
+          title="前一篇:备用页面"
+        ></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">备用页面</h3>
+      </div><div class="article-nav-link-wrap right"><img
+              data-src="https://tc.alcy.cc/tc/20260121/2c785c4a015e858d9d470d51ca702a1a.webp"
+              data-sizes="auto"
+              alt="基于CF worker方法的DOH搭建"
+              class="lazyload"
+            /><a
+          href="/post/%E5%9F%BA%E4%BA%8Ecf-worker%E6%96%B9%E6%B3%95%E7%9A%84doh%E6%90%AD%E5%BB%BA/"
+          aria-label="后一篇:基于CF worker方法的DOH搭建"
+          title="后一篇:基于CF worker方法的DOH搭建"
+        ></a>
+        <div class="article-nav-caption">后一篇</div>
+        <h3 class="article-nav-title">基于CF worker方法的DOH搭建</h3>
+      </div></nav></article><section id="comments" data-aos="fade-up">
+<div class="comment-header"><h2 class="comment-title">说些什么吧！</h2>
+  <div class="comment-selector">
+    <div class="comment-selector-wrap"><div class="selector-item" data-selector="waline">
+          <span>waline</span>
+        </div></div>
+  </div>
+</div>
+
+<div class="comment-content"><div class="comment waline-comment" data-aos="fade-up"
+     >
+    </div></div>
+</section></section>
+        </div><footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info"><div>
+      <span class="icon-copyright"></span>2025-2026<span class="footer-info-sep rotate"></span>夏沐真凉
+    </div><div>
+        基于&nbsp;<a
+          href="https://gohugo.io/"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Hugo</a
+        >&nbsp;Theme.<a
+          href="https://github.com/D-Sketon/hugo-theme-reimu"
+          target="_blank"
+          rel="noopener nofollow noreferrer"
+          >Reimu</a
+        >
+      </div><div>
+        <span class="icon-brush"
+          >&nbsp;25.4k</span
+        >
+        &nbsp;|&nbsp;
+        <span class="icon-coffee">&nbsp;00:57</span>
+      </div></div>
+</footer>
+<div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div><div id="mask" class="hide"></div>
+      </div><nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap"><div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class">
+  <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#前言">前言</a>
+          <ol>
+            <li><a href="#必备准备">必备准备</a></li>
+          </ol>
+        </li>
+        <li><a href="#前期操作">前期操作</a>
+          <ol>
+            <li><a href="#创建服务器">创建服务器</a></li>
+            <li><a href="#服务器配置">服务器配置</a></li>
+          </ol>
+        </li>
+        <li><a href="#cloudflare的内网穿透设置">Cloudflare的内网穿透设置</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+</div></div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img
+    data-src="/avatar/avatar.png"
+    data-sizes="auto"
+    alt="夏沐真凉"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">夏沐真凉</div>
+  <div class="sidebar-description">Ciallo～(∠・ω&lt; )⌒★</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div><div class="sidebar-state-number">10</div>
+  </div>
+  <a class="sidebar-state-category" href="/categories/" aria-label="sidebar-state-category-link">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      1
+    </div>
+  </a>
+  <a class="sidebar-state-tag" href="/tags/" aria-label="sidebar-state-tag-link">
+    <div>标签</div>
+    <div class="sidebar-state-number">3</div>
+  </a>
+</div>
+<div class="sidebar-social" ><div class="icon-bilibili sidebar-social-icon">
+      <a
+        href="https://space.bilibili.com/3691012213967375"
+        itemprop="url"
+        target="_blank"
+        aria-label="bilibili"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div><div class="icon-email sidebar-social-icon">
+      <a
+        href="#ZgotmplZ"
+        itemprop="url"
+        target="_blank"
+        aria-label="email"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div><div class="icon-github sidebar-social-icon">
+      <a
+        href="https://github.com/nino-natsume"
+        itemprop="url"
+        target="_blank"
+        aria-label="github"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div><div class="icon-telegram sidebar-social-icon">
+      <a
+        href="https://t.me/nino_natsume0721"
+        itemprop="url"
+        target="_blank"
+        aria-label="telegram"
+        rel="noopener nofollow noreferrer"
+      ></a>
+    </div></div><div class="sidebar-menu"><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="首页"
+      ></a><div class='sidebar-menu-icon icon '>&#xe638;</div>
+      <div class="sidebar-menu-link">首页</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="归档"
+      ></a><div class='sidebar-menu-icon icon '>&#xe63d;</div>
+      <div class="sidebar-menu-link">归档</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="关于"
+      ></a><div class='sidebar-menu-icon icon '>&#xe633;</div>
+      <div class="sidebar-menu-link">关于</div>
+    </div><div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/link"
+        aria-label="更多"
+      ></a><div class='sidebar-menu-icon icon '>&#xe639;</div>
+      <div class="sidebar-menu-link">更多</div>
+    </div></div></div></div><div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div></nav>
+</div><div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png" />
+        </div>
+      </div><meting-js
+        theme="var(--color-link)"
+        id="5053789278"server="netease"type="playlist"auto="true"fixed="true"autoplay="true"order="random">
+      </meting-js><script
+    src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js"
+    
+    
+    
+    
+    integrity="sha384-3gT/vsepWkfz/ff7PpWNUeMzeWoH3cDhm/A8jM7ouoAK0/fP/9bcHHR5kHq2nf&#43;e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js"
+    
+    
+    
+    
+    integrity="sha384-J08i8An/QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script><script src="/js/main.js" integrity="" crossorigin="anonymous"  ></script><script src="/js/aos.js" integrity="" crossorigin="anonymous"  ></script><script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", aosInit);
+    } else {
+      aosInit();
+    }
+  </script><script src="/js/pjax_main.js" integrity="" crossorigin="anonymous" data-pjax ></script><script>
+    var ALGOLIA_CONFIG = {
+      logo: '\/images\/algolia_logo.svg',
+      algolia: {
+        applicationID: "IFR0UG9K9Q",
+        apiKey: "10c622763305ebe881c2acded929e925",
+        indexName: "次元星域",
+        hits: {
+          "per_page": parseInt("20")
+        },
+        labels: {
+          "input_placeholder": '搜索.....',
+          "hits_empty": '未发现与 「${query}」相关内容',
+          "hits_stats": '找到${hits}条结果（用时 ${time} ms）'
+        }
+      }
+    };
+  </script><script
+    src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js"
+    defer
+    
+    
+    
+    integrity="sha384-xvLS0jfKuoREs7pqkRI/OI8GcqohO5S&#43;jQz7ZBtQXnsXmD&#43;9jDOOY4cL6dCPzlrk" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js"
+    defer
+    
+    
+    
+    integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l&#43;M5Q2WH/Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" crossorigin="anonymous"></script><script src="/js/algolia_search.js" integrity="" crossorigin="anonymous"  ></script><script>
+  var setupFirework = () => {
+    if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
+      if (window.firework) {
+        const options = JSON.parse("{\"excludeelements\":[\"a\",\"button\"],\"particles\":[{\"colors\":[\"var(--red-1)\",\"var(--red-2)\",\"var(--red-3)\",\"var(--red-4)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"emit\"],\"number\":20,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.3,0.5],\"radius\":[16,32]}},{\"colors\":[\"var(--red-0)\"],\"duration\":[1200,1800],\"easing\":\"easeOutExpo\",\"move\":[\"diffuse\"],\"number\":1,\"shape\":\"circle\",\"shapeOptions\":{\"alpha\":[0.2,0.5],\"lineWidth\":6,\"radius\":20}}]}");
+        options.excludeElements = options.excludeelements;
+        delete options.excludeelements;
+        window.firework(options);
+      }
+    }
+  }
+</script><script
+    src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js"
+    defer
+    
+    
+    onload="setupFirework()"
+    integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8&#43;pUoWX8n1rgq282T" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js"
+    
+    
+    
+    
+    integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE/jMSCxD&#43;jAPU55x/jj3wlf" crossorigin="anonymous"></script><script src="/js/pjax.js" integrity="" crossorigin="anonymous"  ></script><script
+    src="https://npm.webcache.cn/live2d-widgets@0.9.0/autoload.js"
+    defer
+    
+    
+    
+    integrity="sha384-poTN7wN/SqNhQqo3jdFeX20ikddWeFGkUkDEzsKjgH/ez8aQLn81oI0Cw6q5xNyB" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/quicklink@3.0.1/dist/quicklink.umd.js"
+    
+    
+    
+    
+    integrity="sha384-caMDqvgav/HWdEYQU1QRRHMLleigpL1YHAG0m371DhzfL8rRzUyOb&#43;bEHtwlmYjD" crossorigin="anonymous"></script><script data-pjax>
+    window.quicklink?.listen({
+      timeout:  3000 ,
+      priority:  true ,
+      ignores: JSON.parse("[]")
+    });
+  </script>
+
+
+<div id="lazy-script">
+  <div><script data-pjax>
+        window.REIMU_POST = {
+          author: "夏沐真凉",
+          title: "基于VMWare的家用服务器设置",
+          url: "https:\/\/nino-natsume.github.io\/post\/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE\/",
+          description: " 前言 有些地区的运营商不会给用户开放公网ip，如果有也可能是动态公网，使用起来特别不友好\n",
+          cover: "https:\/\/t.alcy.cc\/ycy",
+        };
+      </script><script src="/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax ></script><script src="/js/tabs.js" integrity="" crossorigin="anonymous" data-pjax defer></script><script type="module" data-pjax>const PhotoSwipeLightbox = (await safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js", "sha384-DiL6M\/gG\u002bwmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF\/N6lrZi\/")).default;const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,pswpModule: () => safeImport("https:\/\/npm.webcache.cn\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8\u002boTJ7m3DfYEWX1fu1scuS4\u002bs")}).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+        }
+        pswp()
+      </script><script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+  var commentConfigKeys = ['valine', 'waline', 'twikoo', 'gitalk', 'giscus', 'disqus', 'utterances'];
+  var commentConfig = {waline: {
+      enable: true,
+      load: async () => {
+        const container = document.querySelector('.waline-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        let walineInit;
+        const walineCdn = 'https:\/\/npm.webcache.cn\/@waline\/client@2.15.8\/dist\/waline.mjs';
+        
+        if ('webcache|@waline\/client@2.15.8\/dist\/waline.mjs'.startsWith('local')) {
+          
+          const module = await safeImport(walineCdn);
+          walineInit = module.init;
+        } else {
+          
+          const module = await safeImport(
+            walineCdn, 
+            'sha384-9sbqJjrfGjbkI6\/PI4nU\/MvBfEmkkPC4YK9I4zBeMIf1CVCZdCMH\/KinBEAZII\/5'
+          );
+          walineInit = module.init;
+        }
+        
+        window.walineInstance = walineInit({
+          el: '.waline-comment',
+          serverURL: 'https:\/\/comment.107211.xyz\/',
+          lang: document.documentElement.lang || 'en',
+          locale: JSON.parse("{}"),
+          emoji: JSON.parse("[\"https://unpkg.com/@waline/emojis@1.2.0/weibo\",\"https://unpkg.com/@waline/emojis@1.2.0/alus\",\"https://unpkg.com/@waline/emojis@1.2.0/bilibili\",\"https://unpkg.com/@waline/emojis@1.2.0/qq\",\"https://unpkg.com/@waline/emojis@1.2.0/tieba\",\"https://unpkg.com/@waline/emojis@1.2.0/tw-emoji\"]"),
+          meta: JSON.parse("[\"nick\",\"mail\",\"link\"]"),
+          requiredMeta: JSON.parse("[\"nick\",\"mail\"]"),
+          wordLimit:  0 ,
+          comment: true,
+          pageSize:  10 ,
+          dark: 'html[data-theme="dark"]',
+          pageview:  true ,
+        });
+      }
+    },};
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig?.[key]?.enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    
+    if (!defaultComment) {
+      var configDefault = 'waline';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig?.[sys]?.enable) || '';
+    }
+  }
+
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false
+    };
+
+    
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      
+      const commentType = item.getAttribute('data-selector');
+
+      
+      hideAllComments();
+
+      
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          
+          changeActiveCommentItems(item);
+        });
+      }
+
+      
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script><script
+    src="https://npm.webcache.cn/qrcode@1.5.1/build/qrcode.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-VT1EeewTCEXgndcPMQ0PzV&#43;uVFYjxFIjmAA7s5gcMX9t4Dt5TD&#43;OVQIn7NJWIXn7" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/@zumer/snapdom@1.9.14/dist/snapdom.min.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-OEQ&#43;fJp/Mvi2uzBREXybtxryJvLytWapuHu4EE6LPwTKUwATYcc55tPPcZTzVcmx" crossorigin="anonymous"></script></div>
+</div><script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  </script><script>
+  const reimuCopyright = String.raw`
+   ______     ______     __     __    __     __  __    
+  /\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+  \ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+   \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+    \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                    
+  `;
+  console.log(String.raw`%c ${reimuCopyright}`, "color: #ff5252;");
+  console.log(
+    "%c Theme.Reimu" + " %c https://github.com/D-Sketon/hugo-theme-reimu ",
+    "color: white; background: #ff5252; padding:5px 0;",
+    "padding:4px;border:1px solid #ff5252;",
+  );
+</script><script>
+    var setupAPlayer = () => {
+      if (! false  || !window.matchMedia('(max-width: 768px)').matches) {
+        if (window.matchMedia('(max-width: 959px)').matches) {
+          const meting = _$('meting-js');
+          if (meting) {
+            meting.setAttribute('fixed', 'true');
+            const aside = meting.parentNode?.parentNode;
+            if (aside?.tagName === 'ASIDE') {
+              meting.parentNode.removeChild(meting);
+              document.body.appendChild(meting);
+            }
+          }
+        }
+      }
+    };var meting_api = 'https:\/\/api.107211.xyz\/api?server=:server\u0026type=:type\u0026id=:id\u0026auth=:auth\u0026r=:r';</script><script
+    src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js"
+    defer
+    
+    
+    onload="setupAPlayer()"
+    integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr&#43;h5UfruuRL/aORyw&#43;5&#43;HZoU6e" crossorigin="anonymous"></script><script
+    src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js"
+    defer
+    
+    
+    
+    integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8&#43;0maanw1S/IyB&#43;Y4JG&#43;ZDU7GpKE8" crossorigin="anonymous"></script></body>
+</html>

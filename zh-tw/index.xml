@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>次元星域</title>
+    <link>https://nino-natsume.github.io/zh-tw/algolia.json</link>
+    <description>Recent content from 次元星域</description>
+    <generator>Hugo</generator>
+    <language>zh-TW</language>
+    
+    <managingEditor>info@natsume.xin (夏沐真凉)</managingEditor>
+    <webMaster>info@natsume.xin (夏沐真凉)</webMaster>
+    
+    <copyright>本部落格所有文章除特別聲明外，均採用 BY-NC-SA 授權協議。轉載請註明出處！</copyright>
+    
+    <lastBuildDate>Sat, 01 Jan 2000 00:00:01 +0900</lastBuildDate>
+    
+    
+    <atom:link href="https://nino-natsume.github.io/zh-tw/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>致 繁中用户</title>
+      <link>https://nino-natsume.github.io/zh-tw/post/%E8%87%B4-%E7%B9%81%E4%B8%AD%E7%94%A8%E6%88%B7/</link>
+      <pubDate>Sat, 01 Jan 2000 00:00:01 &#43;0900</pubDate>
+      <author>info@natsume.xin (夏沐真凉)</author>
+      <guid>https://nino-natsume.github.io/zh-tw/post/%E8%87%B4-%E7%B9%81%E4%B8%AD%E7%94%A8%E6%88%B7/</guid>
+      <description>
+        <![CDATA[<h1>致 繁中用户</h1><p>作者：夏沐真凉（info@natsume.xin）</p>
+        
+          <h1 id="本篇設定了僅-繁體中文-語言使用者可見">
+<a class="header-anchor" href="#%e6%9c%ac%e7%af%87%e8%a8%ad%e5%ae%9a%e4%ba%86%e5%83%85-%e7%b9%81%e9%ab%94%e4%b8%ad%e6%96%87-%e8%aa%9e%e8%a8%80%e4%bd%bf%e7%94%a8%e8%80%85%e5%8f%af%e8%a6%8b"></a>
+<strong>本篇設定了僅 繁體中文 語言使用者可見</strong>
+</h1><p>本站將不為繁體中文（含中國香港、中國澳門、中國台灣等）用戶提供資源</p>
+<p>因為太麻煩了，一篇文章要更新幾種語言，主題還沒有自動翻譯插件，若有需要請使用其他語言</p>
+        
+        <hr><p>本文2000-01-01首發於<a href='https://nino-natsume.github.io/'>次元星域</a>，最後修改於2000-01-01</p>]]>
+      </description>
+      
+    </item>
+    
+  </channel>
+</rss>

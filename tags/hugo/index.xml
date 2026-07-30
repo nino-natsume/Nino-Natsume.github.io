@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on 次元星域</title>
+    <link>https://nino-natsume.github.io/tags/hugo/</link>
+    <description>Recent content from 次元星域</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    
+    <managingEditor>info@natsume.xin (夏沐真凉)</managingEditor>
+    <webMaster>info@natsume.xin (夏沐真凉)</webMaster>
+    
+    <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
+    
+    <lastBuildDate>Sun, 01 Mar 2026 11:00:00 +0900</lastBuildDate>
+    
+    
+    <atom:link href="https://nino-natsume.github.io/tags/hugo/index.xml" rel="self" type="application/rss&#43;xml" />
+    
+
+    
+    
+
+    <item>
+      <title>基于VMWare的家用服务器设置</title>
+      <link>https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Sun, 01 Mar 2026 11:00:00 &#43;0900</pubDate>
+      <author>info@natsume.xin (夏沐真凉)</author>
+      <guid>https://nino-natsume.github.io/post/%E5%9F%BA%E4%BA%8Evmware%E7%9A%84%E5%AE%B6%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE/</guid>
+      <description>
+        <![CDATA[<h1>基于VMWare的家用服务器设置</h1><p>作者：夏沐真凉（info@natsume.xin）</p>
+        
+          <h2 id="前言">
+<a class="header-anchor" href="#%e5%89%8d%e8%a8%80"></a>
+前言
+</h2><p>有些地区的运营商不会给用户开放公网ip，如果有也可能是动态公网，使用起来特别不友好</p>
+<p>如果用户有建站的需求，那么他大概率会想到在服务器商处购买服务器和域名，在国内的服务器还需要备案等，非常麻烦对吧？</p>
+        
+        <hr><p>本文2026-03-01首发于<a href='https://nino-natsume.github.io/'>次元星域</a>，最后修改于2026-03-01</p>]]>
+      </description>
+      
+        <category>次元星域</category>
+      
+    </item>
+    
+    
+
+    <item>
+      <title>Hugo建站全流程</title>
+      <link>https://nino-natsume.github.io/post/hugo%E5%BB%BA%E7%AB%99%E5%85%A8%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Sat, 28 Feb 2026 11:00:00 &#43;0900</pubDate>
+      <author>info@natsume.xin (夏沐真凉)</author>
+      <guid>https://nino-natsume.github.io/post/hugo%E5%BB%BA%E7%AB%99%E5%85%A8%E6%B5%81%E7%A8%8B/</guid>
+      <description>
+        <![CDATA[<h1>Hugo建站全流程</h1><p>作者：夏沐真凉（info@natsume.xin）</p>
+        
+          <h1 id="前言">
+<a class="header-anchor" href="#%e5%89%8d%e8%a8%80"></a>
+前言
+</h1><p>因为不想专门开一个blog来写这个教程，所以统一用这篇文章来讲，尽量写详细到位点，确保你尽可能地成功搭建出来</p>
+<p>本篇使用Hugo框架 + hugo-theme-reimu主题编写，从创建、配置再到部署，用一篇文章分点讲清楚，其他主题需参考该主题的官方文档设置</p>
+        
+        <hr><p>本文2026-02-28首发于<a href='https://nino-natsume.github.io/'>次元星域</a>，最后修改于2026-02-28</p>]]>
+      </description>
+      
+        <category>次元星域</category>
+      
+    </item>
+    
+  </channel>
+</rss>
