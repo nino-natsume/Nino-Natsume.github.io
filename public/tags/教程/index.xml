@@ -12,12 +12,43 @@
     
     <copyright>本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</copyright>
     
-    <lastBuildDate>Wed, 15 Apr 2026 11:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 12:00:00 +0900</lastBuildDate>
     
     
     <atom:link href="http://localhost:1313/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss&#43;xml" />
     
 
+    
+    
+
+    <item>
+      <title>基于CF的优选域名搭建(其一：使用华为云)</title>
+      <link>http://localhost:1313/post/%E5%9F%BA%E4%BA%8Ecf-&#43;-%E5%8D%8E%E4%B8%BA%E4%BA%91%E7%9A%84%E4%BC%98%E9%80%89%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Thu, 30 Jul 2026 12:00:00 &#43;0900</pubDate>
+      <author>info@natsume.xin (夏沐真凉)</author>
+      <guid>http://localhost:1313/post/%E5%9F%BA%E4%BA%8Ecf-&#43;-%E5%8D%8E%E4%B8%BA%E4%BA%91%E7%9A%84%E4%BC%98%E9%80%89%E5%9F%9F%E5%90%8D%E6%90%AD%E5%BB%BA/</guid>
+      <description>
+        <![CDATA[<h1>基于CF的优选域名搭建(其一：使用华为云)</h1><p>作者：夏沐真凉（info@natsume.xin）</p>
+        
+          <h3 id="提前准备">
+<a class="header-anchor" href="#%e6%8f%90%e5%89%8d%e5%87%86%e5%a4%87"></a>
+提前准备
+</h3><ol>
+<li>
+<p>Cloudflare账号 x1</p>
+</li>
+<li>
+<p>华为云国际版账号 x1</p>
+</li>
+<li>
+<p>域名 x1，注意不能是 xxx.cc.cd、xxx.ddns.ge等复合后缀产生的域名后缀</p>
+        
+        <hr><p>本文2026-07-30首发于<a href='http://localhost:1313/'>次元星域</a>，最后修改于2026-07-30</p>]]>
+      </description>
+      
+        <category></category>
+      
+    </item>
     
     
 
